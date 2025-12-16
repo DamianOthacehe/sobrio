@@ -51,3 +51,106 @@
         transform: scale(1);
     }
 }
+
+.aspirational-section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.aspirational-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+.aspirational-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card-image {
+    width: 100%;
+    height: 350px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    font-family: var(--font-body); /* Usa la fuente de cuerpo o display, según prefieras */
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary-dark);
+}
+
+.card-text {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.signature-text {
+    /* Estilo para la firma 'Sobrio' en la primera tarjeta */
+    font-family: var(--font-display); 
+    color: var(--color-accent); 
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.join-ritual-block {
+    display: grid;
+    /* 2 columnas: 1 para texto, 1 para imagen (50/50 o ajusta el ratio) */
+    grid-template-columns: 1fr 1fr; 
+    gap: 4rem;
+    align-items: center;
+}
+
+.ritual-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ritual-title {
+    font-family: var(--font-display); /* Usar la fuente elegante para este titular */
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary-dark);
+}
+
+.ritual-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.join-club-cta {
+    /* En la imagen es un botón con borde rojo y fondo blanco/claro */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    margin-top: 2rem;
+    
+    background-color: transparent; /* Fondo transparente (igual que el body) */
+    border: 2px solid var(--color-accent); /* Borde Rojo */
+    border-radius: 5px;
+    text-decoration: none;
+    
+    color: var(--color-accent); /* Texto Rojo */
+    font-weight: bold;
+    font-family: var(--font-body);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.join-club-cta:hover {
+    background-color: var(--color-accent); /* Invertir colores al pasar el ratón */
+    color: var(--color-secondary-white); /* Texto blanco */
+}
+
+.cta-icon {
+    font-size: 1.5rem;
+}
