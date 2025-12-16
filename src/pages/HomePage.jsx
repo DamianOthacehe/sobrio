@@ -62,6 +62,60 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
+            <section className='subscriptions-section'>
+                <div className='subscriptions-header-block'>
+                    <h2 className="subscriptions-main-title title-display">Join the club</h2>
+                    <div className='plans-grid'>
+                        <article className='plan-card plan-noir'>
+                            <div className='plan-logo'>(S)</div>
+                            <h3 className='plan-title'>Noir</h3>
+                            <p className='plan-description'>Vinos con carácter y profundidad. Selección que desafía tus límites. Para cuando el momento lo merece.</p>
+                            <p className='plan-signature'>SOBRIO</p>
+                        </article>
+                        <article className='plan-card plan-blanc'>
+                            <div className='plan-logo'>(S)</div>
+                            <h3 className='plan-title'>Blanc</h3>
+                            <p className='plan-description'>Blancos, frescos, elegantes y expresivos. Ideal para descorchar sin culpa y sin perder intención.</p>
+                            <p className='plan-signature'>SOBRIO</p>
+                        </article>
+                        <article className='plan-card plan-equilibre'>
+                            <div className='plan-logo'>(S)</div>
+                            <h3 className='plan-title'>Équilibre</h3>
+                            <p className='plan-description'>El punto justo entre ambos mundos. Una curaduría para quienes no temen disfrutar "sin reglas".</p>
+                            <p className='plan-signature'>SOBRIO</p>
+                        </article>
+                    </div>
+                </div>
+                <div className='registration-form-block'>
+                    <div className='registration-content'>
+                        <div className='registration-text-icon'>
+                            <h2 className='resitration-title'>
+                                Registrate para recibir cada mes nuestra mejor seleccion.
+                            </h2>
+                            <div className="large-cup-icon">
+                                <img src="https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/Copa%20blanca.png" alt="Copa blanca" />
+                            </div>
+                        </div>
+                        <form className="subscription-form">
+                            <input type="text" placeholder="Tu nombre completo" className="form-input" />
+                            <input type="email" placeholder="Tu mail" className="form-input" />
+                            <input type="tel" placeholder="Tu telefono" className="form-input" />
+                            
+                            <select className="form-input form-select">
+                                <option value="">Que plan elegis</option>
+                                <option value="Noir">Noir</option>
+                                <option value="Blanc">Blanc</option>
+                                <option value="Equilibre">Équilibre</option>
+                            </select>
+                            
+                            <textarea placeholder="Contanos que vinos te gustan" className="form-input form-textarea"></textarea>
+                            
+                            {/* CTA del formulario (fondo blanco, texto rojo) */}
+                            <button type="submit" className="form-cta-button">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </main>
     )
 }

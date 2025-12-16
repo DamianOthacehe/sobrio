@@ -157,3 +157,182 @@
     height: auto;
 vertical-align: middle;
 }
+
+/* --- SECCIÓN DE SUSCRIPCIONES --- */
+.subscriptions-header-block {
+    background-image: url('https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/banner-brindis.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem 4rem; 
+    position: relative; 
+    color: var(--color-secondary-white); 
+}
+
+.subscriptions-header-block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.subscriptions-main-title {
+    font-size: 5rem;
+    color: var(--color-accent);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.plan-card {
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    height: 100%;
+    position: relative;
+}
+
+.plan-logo {
+    font-family: var(--font-display); 
+    font-size: 1.2rem;
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.plan-title {
+    font-family: var(--font-body); 
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.plan-description {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.plan-signature {
+    font-family: var(--font-display); 
+    font-size: 1.2rem;
+    margin-top: auto; 
+}
+
+
+.plan-noir {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary-dark);
+}
+
+.plan-blanc {
+    background-color: var(--color-secondary-light);
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary-dark);
+}
+
+.plan-equilibre {
+    background-color: var(--color-secondary-black);
+    color: var(--color-secondary-white);
+    border: 1px solid var(--color-secondary-black);
+}
+
+.plan-equilibre .plan-logo, .plan-equilibre .plan-signature {
+    color: var(--color-accent); /* Logo/Signature en Rojo sobre fondo negro */
+}
+
+/* --- FORMULARIO --- */
+.registration-form-block {
+    background-color: var(--color-accent);
+    padding: 4rem 2rem;
+}
+
+.registration-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--color-secondary-white);
+}
+
+.registration-title {
+    font-family: var(--font-body);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.large-cup-icon {
+    /* TODO: Reemplazar URL_COPA_GRANDE_BLANCA con tu imagen de Cloudflare */
+    background-image: url('https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/Copa%20blanca.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin-top: 2rem;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: var(--color-secondary-white);
+    color: var(--color-primary-dark);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border-bottom: 2px solid var(--color-accent); 
+}
+
+.form-input::placeholder {
+    color: rgba(26, 10, 7, 0.7);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-cta-button {
+    background-color: var(--color-secondary-white);
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    padding: 1rem 2rem;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 1rem;
+}
+
+.form-cta-button:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-secondary-white); 
+    border-color: var(--color-secondary-white);
+}
