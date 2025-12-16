@@ -134,6 +134,7 @@
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
     margin-top: 2rem;
+    position: relative;
     
     background-color: transparent; /* Fondo transparente (igual que el body) */
     border: 2px solid var(--color-accent); /* Borde Rojo */
@@ -151,6 +152,8 @@
     color: var(--color-secondary-white); /* Texto blanco */
 }
 
-.cta-icon {
-    font-size: 1.5rem;
+.cta-icon-img {
+    width: 24px;
+    height: auto;
+vertical-align: middle;
 }
