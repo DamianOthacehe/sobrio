@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&family=Libre+Caslon+Display&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Colores */
+    --color-accent: #FF391F;
+    --color-primary-dark: #1A0A07;
+    --color-secondary-black: #000000;
+    --color-secondary-light: #FDEEDC;
+    --color-secondary-white: #FFFFFF;
+
+    /* Tipografía */
+    --font-body: 'Libre Caslon Display', serif;
+    --font-display: 'Kapakana', sans-serif;
+}
+
+body {
+    /* 1. Fondo de la página: Cream claro */
+    background-color: var(--color-secondary-light);
+
+    /* 2. Color del texto por defecto: Casi negro */
+    color: var(--color-primary-dark);
+
+    /* 3. Fuente predeterminada */
+    font-family: var(--font-body);
+}

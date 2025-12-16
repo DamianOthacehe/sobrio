@@ -1,0 +1,21 @@
+.main-header {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-secondary-black);
+}
+
+.header-logo {
+    width: 3rem;
+    height: auto;
+    display: block;
+}
+
+.header-menu-icon {
+    border: none;
+    background-color: transparent;
+    color: var(--color-accent);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
