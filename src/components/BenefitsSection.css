@@ -1,0 +1,75 @@
+.benefits-section {
+    background-color: var(--color-primary-dark); 
+    padding: 6rem 2rem;
+    color: var(--color-secondary-white);
+}
+
+.benefits-content-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 2fr; 
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* --- Bloque de Texto y Lista --- */
+.benefits-title {
+    font-size: 3rem;
+    color: var(--color-secondary-white);
+    margin-bottom: 2.5rem;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.check-icon {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+/* --- CTA del Bloque de Beneficios (Botón Rojo) --- */
+.benefits-cta-button {
+    background-color: var(--color-accent); 
+    color: var(--color-secondary-white); 
+    
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+.benefits-cta-button:hover {
+    opacity: 0.9;
+}
+
+/* --- Bloque de Imagen --- */
+.box-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .benefits-content-wrapper {
+        /* Pasa a una columna, poniendo la imagen debajo del texto */
+        grid-template-columns: 1fr;
+    }
+}

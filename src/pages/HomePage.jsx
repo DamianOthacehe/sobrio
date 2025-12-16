@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './HomePage.css'
 import SubscriptionsSection from '../components/SubscriptionsSection';
 import AspirationalBlock from '../components/AspirationalBlock';
+import BenefitsSection from '../components/BenefitsSection';
 
 export default function HomePage() {
     return (
@@ -15,5 +16,6 @@ export default function HomePage() {
             </section>
             <AspirationalBlock/>
             <SubscriptionsSection/>
+            <BenefitsSection/>
         </main>
     )}

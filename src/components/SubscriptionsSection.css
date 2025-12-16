@@ -96,7 +96,7 @@
 }
 
 .plan-equilibre {
-    background-color: var(--color-secondary-black);
+    background-color: var(--color-primary-dark);
     color: var(--color-secondary-white);
     border: 1px solid var(--color-secondary-black);
 }
