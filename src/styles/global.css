@@ -45,3 +45,7 @@ body {
     /* 3. Fuente predeterminada */
     font-family: var(--font-body);
 }
+
+.title-display {
+    font-family: var(--font-body);
+}
