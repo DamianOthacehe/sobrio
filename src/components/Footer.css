@@ -1,0 +1,171 @@
+.main-footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-secondary-light);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. ¿Charlamos? sin negrita y con más espacio inferior */
+.charlamos-title {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: normal; /* Quitado el bold */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    color: white;
+    margin-bottom: 5rem; /* Mayor padding/margin al bloque siguiente */
+}
+
+.footer-title-icon {
+    width: 35px;
+    height: auto;
+}
+
+/* 3. Bloque de contacto centrado */
+.footer-contact-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Centra el bloque entero */
+    align-items: flex-start;
+    gap: 5rem;
+    margin-bottom: 8rem; /* Espacio antes de Club de Brindis */
+}
+
+.footer-cta-text {
+    padding-top: 20px;
+    text-align: center; /* Alineación del texto descriptivo */
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+.footer-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo de inputs */
+.footer-input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    gap: 1rem;
+}
+
+.footer-label {
+    min-width: 70px;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.footer-framed-input {
+    background: transparent;
+    border: 1px solid white;
+    border-top: none; 
+    color: white;
+    padding: 8px 12px;
+    width: 300px;
+    outline: none;
+}
+
+.footer-textarea {
+    min-height: 40px; /* Ajusta la altura del campo mensaje */
+    resize: none;
+}
+
+/* 4. Botón a la derecha */
+.footer-submit-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Alinea botón a la derecha */
+}
+
+.footer-submit-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.4rem 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.footer-submit-btn:hover {
+    background-color: white; /* El fondo se vuelve blanco */
+    color: var(--color-primary-dark); /* El texto toma el color oscuro del footer */
+}
+
+/* 5. Club de brindis - Ajuste de espacio */
+.club-title {
+    font-family: var(--font-display);
+    text-align: center;
+    font-size: 5.5rem;
+    font-weight: normal;
+    margin-bottom: 4rem; /* Reducido para igualar al bloque superior */
+}
+
+/* 6. Enlaces */
+.footer-links-block ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-block li a{
+    color: white;
+    text-decoration: none;
+    line-height: 2.5;
+    font-size: 1.1rem;
+}
+
+.links-title {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.footer-info-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.footer-isotipo-large {
+    width: 130px;
+    height: auto;
+}
+
+.footer-social-block {
+    text-align: right;
+}
+
+.footer-social-block p {
+    margin-bottom: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
