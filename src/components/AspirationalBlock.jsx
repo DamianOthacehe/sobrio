@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
 import './AspirationalBlock.css';
+import CtaButton from './CTAButton';
 
 export default function AspirationalBlock() {
     
@@ -7,8 +7,6 @@ export default function AspirationalBlock() {
     const IMG_2 = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/premium_photo-1753322890984-c4ed661ac805.jpg';
     const IMG_3 = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/photo-1525576064846-083dce8b33ba.jpg';
     const IMG_4 = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/kelsey-knight-udj2tD3WKsY-unsplash.jpg';
-    const ICON_RED = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/Copa%20roja.png';
-    const ICON_WHITE = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/Copa%20blanca.png';
 
     return (
         <section className="aspirational-section">
@@ -48,26 +46,7 @@ export default function AspirationalBlock() {
                     <p className="ritual-paragraph">Cada botella tiene una historia</p>
                     <p className="ritual-paragraph">Unite a una comunidad que celebra el brindis como un arte</p>
                     
-                    {/* CTA con lógica de hover para cambio de imagen (copa) */}
-                    <NavLink 
-                        to="#subscriptions" 
-                        className="join-club-cta"
-                        onMouseEnter={(e) => {
-                            e.currentTarget.querySelector('.cta-icon-img').src = ICON_WHITE;
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.querySelector('.cta-icon-img').src = ICON_RED;
-                        }}
-                    >
-                        <img 
-                            src={ICON_RED} 
-                            alt="Copa de vino icono" 
-                            className="cta-icon-img"
-                            data-icon-red={ICON_RED} 
-                            data-icon-white={ICON_WHITE} 
-                        />
-                        Sumate al club
-                    </NavLink>
+                    <CtaButton text="Sumate al club" to="#subscriptions" />
                 </div>
                 <div className="ritual-image-content">
                     <img src={IMG_4} alt="Gente brindando con copas de vino" className="ritual-image"/>

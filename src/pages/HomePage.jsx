@@ -4,6 +4,7 @@ import SubscriptionsSection from '../components/SubscriptionsSection';
 import AspirationalBlock from '../components/AspirationalBlock';
 import BenefitsSection from '../components/BenefitsSection';
 import MonthlySelections from '../components/MonthlySelections';
+import FAQSection from '../components/FAQSection';
 
 export default function HomePage() {
     return (
@@ -19,5 +20,6 @@ export default function HomePage() {
             <SubscriptionsSection/>
             <BenefitsSection/>
             <MonthlySelections/>
+            <FAQSection/>
         </main>
     )}
