@@ -3,6 +3,7 @@ import './HomePage.css'
 import SubscriptionsSection from '../components/SubscriptionsSection';
 import AspirationalBlock from '../components/AspirationalBlock';
 import BenefitsSection from '../components/BenefitsSection';
+import MonthlySelections from '../components/MonthlySelections';
 
 export default function HomePage() {
     return (
@@ -17,5 +18,6 @@ export default function HomePage() {
             <AspirationalBlock/>
             <SubscriptionsSection/>
             <BenefitsSection/>
+            <MonthlySelections/>
         </main>
     )}

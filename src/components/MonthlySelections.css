@@ -1,0 +1,153 @@
+/* --- Estilos Generales de la Sección --- */
+.monthly-selections-section {
+    /* Fondo Rojo (Requerido) */
+    background-color: var(--color-accent); 
+    padding: 6rem 2rem;
+    color: var(--color-secondary-white);
+}
+
+.selection-title {
+    text-align: center;
+    color: var(--color-secondary-white); /* Título blanco sobre fondo rojo */
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+/* --- Grilla de Vinos --- */
+.wines-grid {
+    display: grid;
+    /* Responsive: tarjetas de mínimo 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Estilos de la Tarjeta (WineCard) --- */
+.wine-card {
+    background-color: var(--color-secondary-white); /* Tarjeta blanca */
+    color: var(--color-primary-dark); /* Texto negro */
+    border-radius: 8px;
+    overflow: hidden; /* Para que nada se salga de los bordes redondeados */
+    position: relative; /* Clave para el posicionamiento absoluto del hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    min-height: 450px; /* Altura mínima para uniformidad */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Estado Normal (Front) */
+.card-front {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: filter 0.3s ease;
+}
+
+.wine-image-container {
+    height: 250px; /* Espacio para la foto */
+    background-color: #f4f4f4; /* Fondo gris claro para la foto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+}
+
+.wine-image {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    /* Efecto de sombra para que la botella parezca flotar */
+    filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.2)); 
+}
+
+.wine-month-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color-primary-dark);
+    color: var(--color-secondary-white);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.wine-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.wine-name {
+    font-family: var(--font-body);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-accent); /* Detalle de marca */
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.tech-sheet p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.3rem;
+}
+
+/* 2. Estado Hover (Overlay) */
+.card-back-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Fondo Negro semi-transparente o sólido para alto contraste */
+    background-color: rgba(26, 10, 7, 0.95); 
+    color: var(--color-secondary-white);
+    
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    
+    /* Inicialmente invisible */
+    opacity: 0;
+    visibility: hidden;
+    
+    /* Transición suave */
+    transition: all 0.4s ease-in-out;
+}
+
+.overlay-title {
+    font-family: var(--font-display);
+    color: var(--color-accent);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.tasting-notes {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.occasion-box {
+    border-top: 1px solid var(--color-accent);
+    padding-top: 1rem;
+    width: 100%;
+}
+
+/* --- Acción de Hover --- */
+.wine-card:hover .card-back-overlay {
+    opacity: 1;
+    visibility: visible;
+}
