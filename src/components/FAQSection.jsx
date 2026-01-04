@@ -9,7 +9,7 @@ export default function FAQSection() {
     const faqs = [
 
         {
-            question: "¿Como funciona la suscripción",
+            question: "¿Como funciona la suscripción?",
             answer: "Cada mes seleccionamos una colección exclusiva de vinos curada por nuestro equipo. Te avisamos antes del envío y podés modificar tus preferencias o saltarte un mes si lo necesitás.",
         },
         {

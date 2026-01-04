@@ -11,7 +11,7 @@ export default function HomePage() {
         <main>
             <section className='hero-section'>
                 <h1 className="hero-title title-display">SOBRIO</h1>
-                <p className="hero-subtitle">Club de Vinos</p>
+                <p className="hero-subtitle text-focus-in">Club de Vinos</p>
                 <NavLink to="/products" className="hero-cta-button">
                     Descubrí la selección de este mes
                 </NavLink>
