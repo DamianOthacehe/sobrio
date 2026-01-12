@@ -1,12 +1,10 @@
 import './AspirationalBlock.css';
-import CtaButton from './CTAButton';
 
-export default function AspirationalBlock() {
+export default function AspirationalSection() {
     
     const IMG_1 = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/adela-dvorakova-kVDPPKpXjF0-unsplash.jpg';
     const IMG_2 = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/premium_photo-1753322890984-c4ed661ac805.jpg';
     const IMG_3 = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/photo-1525576064846-083dce8b33ba.jpg';
-    const IMG_4 = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/kelsey-knight-udj2tD3WKsY-unsplash.jpg';
 
     return (
         <section className="aspirational-section">
@@ -37,20 +35,6 @@ export default function AspirationalBlock() {
                     <p className="card-text">Porque creemos en brindar distinto</p>
                 </article>
                 
-            </div>
-            
-            {/* Bloque Inferior: Ritual compartido (Two Columns) */}
-            <div className="join-ritual-block">
-                <div className="ritual-text-content">
-                    <h2 className="ritual-title">Más que vinos, un ritual compartido</h2>
-                    <p className="ritual-paragraph">Cada botella tiene una historia</p>
-                    <p className="ritual-paragraph">Unite a una comunidad que celebra el brindis como un arte</p>
-                    
-                    <CtaButton text="Sumate al club" to="#subscriptions" />
-                </div>
-                <div className="ritual-image-content">
-                    <img src={IMG_4} alt="Gente brindando con copas de vino" className="ritual-image"/>
-                </div>
             </div>
             
         </section>

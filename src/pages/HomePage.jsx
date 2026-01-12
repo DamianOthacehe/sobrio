@@ -1,10 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import './HomePage.css'
 import SubscriptionsSection from '../components/SubscriptionsSection';
-import AspirationalBlock from '../components/AspirationalBlock';
+import AspirationalSection from '../components/AspirationalSection';
 import BenefitsSection from '../components/BenefitsSection';
 import MonthlySelections from '../components/MonthlySelections';
 import FAQSection from '../components/FAQSection';
+import RitualSection from '../components/RitualSection';
+import PlansSection from '../components/PlansSection';
 
 export default function HomePage() {
     return (
@@ -16,10 +18,23 @@ export default function HomePage() {
                     Descubrí la selección de este mes
                 </NavLink>
             </section>
-            <AspirationalBlock/>
-            <SubscriptionsSection/>
-            <BenefitsSection/>
-            <MonthlySelections/>
-            <FAQSection/>
+
+            <AspirationalSection/>
+            <section className="sticky-card card-ritual">
+                <RitualSection/>
+            </section>
+            
+            <section className="sticky-card card-plans">
+                <PlansSection/>
+            </section>
+            
+            <section className="sticky-card card-subscriptions">
+                <SubscriptionsSection/>
+            </section>
+            <div className="normal-scroll-content">
+                <BenefitsSection/>
+                <MonthlySelections/>
+                <FAQSection/>
+            </div>
         </main>
     )}

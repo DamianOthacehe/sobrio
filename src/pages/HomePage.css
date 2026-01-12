@@ -45,6 +45,52 @@
     background-color: color-mix(in srgb, var(--color-accent) 70%, var(--color-secondary-black));
 }
 
+.sticky-card{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+}
+
+.card-ritual{
+    z-index: 10;
+    background-color: var(--color-secondary-white);
+}
+
+.card-plans{
+    z-index: 20;
+    background-color: var(--color-secondary-white);
+}
+
+.card-plans .subscriptions-header-block {
+    min-height: 100vh; /* Forzamos a que el componente interno llene la carta */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-subscriptions {
+    z-index: 30;
+    background-color: var(--color-accent); 
+}
+
+.card-subscriptions .registration-form-block {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.normal-scroll-content {
+    position: relative;
+    z-index: 40;
+    width: 100%;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+}
+
 /* Animación glow para el Título */
 
 @keyframes glow {

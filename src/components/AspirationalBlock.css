@@ -1,6 +1,7 @@
 /* --- Bloque Aspiracional Superior (3 Columnas) --- */
 .aspirational-section {
-    padding: 6rem 2rem;
+    padding: 2rem;
+    padding-top: 6rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -54,6 +55,10 @@
     grid-template-columns: 1fr 1fr; 
     gap: 4rem;
     align-items: center;
+    padding: 2rem;
+    padding-bottom: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .ritual-image {
