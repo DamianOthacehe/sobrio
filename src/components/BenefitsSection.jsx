@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import './BenefitsSection.css';
 
 export default function BenefitsSection() {
@@ -35,9 +34,9 @@ export default function BenefitsSection() {
                     </ul>
 
                     {/* CTA (Botón Rojo) */}
-                    <NavLink to="#subscriptions" className="benefits-cta-button">
+                    <a href='#selections' className="benefits-cta-button">
                         Descubrí la selección de este mes
-                    </NavLink>
+                    </a>
                 </div>
                 
                 {/* 4.2. Bloque de Imagen (Caja de Vino) */}

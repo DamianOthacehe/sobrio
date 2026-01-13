@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import './HomePage.css'
 import SubscriptionsSection from '../components/SubscriptionsSection';
 import AspirationalSection from '../components/AspirationalSection';
@@ -14,9 +13,9 @@ export default function HomePage() {
             <section id='hero' className='hero-section'>
                 <h1 className="hero-title title-display">SOBRIO</h1>
                 <p className="hero-subtitle text-focus-in">Club de Vinos</p>
-                <NavLink to="/products" className="hero-cta-button">
+                <a href='#selections' className="hero-cta-button">
                     Descubrí la selección de este mes
-                </NavLink>
+                </a>
             </section>
 
             <AspirationalSection/>
