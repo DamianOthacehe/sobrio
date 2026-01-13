@@ -72,7 +72,7 @@ export default function FAQSection() {
                 <div className="faq-footer">
                     <h3 className="faq-footer-title">¿Tenés alguna otra duda?</h3>
                     <p className="faq-footer-text">Escribinos y te ayudamos a elegir el mejor plan para vos</p>
-                    <CtaButton text="Contactanos" to="/contacto" className="faq-cta-margin" />
+                    <CtaButton text="Contactanos" to="#contact" className="faq-cta-margin" />
                 </div>
             </div>
         </section>

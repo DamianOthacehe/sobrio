@@ -44,19 +44,32 @@ export default function Footer() {
                         <ul>
                             <li><a href="#subscriptions">Suscribirse</a></li>
                             <li><a href="#faq">Preguntas frecuentes</a></li>
-                            <li><a href="#home">Ir al inicio</a></li>
+                            <li><a href="#hero">Ir al inicio</a></li>
                         </ul>
                     </div>
 
                     <div className="footer-social-block">
-                        <p>contacto@sobrio.com <span className="icon-white">✉</span></p>
-                        <p>2235647826 <span className="icon-white">📞</span></p>
-                        <p>instagram.com/sobrio.ar <span className="icon-white">📸</span></p>
+                        <p>contacto@sobrio.com <span className="icon-white">
+                            <img src="https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/mail.png"
+                                alt="logo de mail" />
+                        </span>
+                        </p>
+                        <p>2235647826 <span className="icon-white">
+                            <img src="https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/wp.png"
+                                alt="logo de whatsapp" />
+                        </span>
+                        </p>
+                        <p>instagram.com/sobrio.ar
+                            <span className="icon-white">
+                                <img src="https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/ig.png"
+                                    alt="logo de instagram" />
+                            </span>
+                        </p>
                     </div>
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© 2025 SOBRIO - Todos los derechos reservados |
+                    <p>© 2026 SOBRIO - Todos los derechos reservados |
                         Diseñado por <a href="https://www.linkedin.com/in/damian-otha/" target="_blank" rel="noreferrer">Damian Othacehe</a></p>
                 </div>
             </div>
