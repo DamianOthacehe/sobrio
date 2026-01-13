@@ -35,6 +35,10 @@ dd {
     --font-display: 'Kapakana', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /* 1. Fondo de la página: Cream claro */
     background-color: var(--color-secondary-light);
@@ -48,4 +52,15 @@ body {
 
 .title-display {
     font-family: var(--font-body);
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -80px; /* Altura del Header */
+    visibility: hidden;
+}
+
+section[id] {
+    scroll-margin-top: 0; /* Ajusta esto al alto de tu header */
 }

@@ -10,23 +10,25 @@ export default function Footer() {
             <div className="footer-wrapper">
 
                 {/* 1. Título con mayor margen inferior */}
-                <div className="footer-header-centered">
-                    <h2 className="charlamos-title">
-                        ¿Charlamos?
-                        <img src={ICON_WINE_WHITE} alt="copa" className="footer-title-icon" />
-                    </h2>
-                </div>
-
-                <div className="footer-contact-section">
-                    <div className="footer-cta-text">
-                        <p>Queremos acompañarte en cada brindis</p>
-                        <p className="highlight-text">Escribinos y te respondemos <br /> en menos de 24 hs</p>
+                <section id='contact'>
+                    <div className="footer-header-centered">
+                        <h2 className="charlamos-title">
+                            ¿Charlamos?
+                            <img src={ICON_WINE_WHITE} alt="copa" className="footer-title-icon" />
+                        </h2>
                     </div>
 
-                    <div className="footer-form-container">
-                        <ContactForm />
+                    <div className="footer-contact-section">
+                        <div className="footer-cta-text">
+                            <p>Queremos acompañarte en cada brindis</p>
+                            <p className="highlight-text">Escribinos y te respondemos <br /> en menos de 24 hs</p>
+                        </div>
+
+                        <div className="footer-form-container">
+                            <ContactForm />
+                        </div>
                     </div>
-                </div>
+                </section>
 
                 {/* 2. Título Club de brindis */}
                 <h2 className="club-title">Club de brindis</h2>
@@ -38,7 +40,7 @@ export default function Footer() {
 
                     <div className="footer-links-block">
                         {/* Agregamos el título Enlaces */}
-                        <h3 className="links-title">Enlaces</h3> 
+                        <h3 className="links-title">Enlaces</h3>
                         <ul>
                             <li><a href="#subscriptions">Suscribirse</a></li>
                             <li><a href="#faq">Preguntas frecuentes</a></li>

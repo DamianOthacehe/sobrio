@@ -1,9 +1,15 @@
 .main-header {
-    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
     background-color: var(--color-secondary-black);
+    z-index: 2000;
 }
 
 .header-logo {
@@ -16,6 +22,64 @@
     border: none;
     background-color: transparent;
     color: var(--color-accent);
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
+    z-index: 1100;
+    transition: transform 0.3s ease;
+}
+
+.header-menu-icon:active {
+    transform: scale(0.9);
+}
+
+.header-nav {
+    position: absolute;
+    top: -500px; /* Empieza arriba oculto */
+    right: 0;
+    width: 250px;
+    background-color: var(--color-secondary-black);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1; /* Pasa por debajo del logo/botón */
+    padding: 2rem 0;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.header-nav.nav-open {
+    top: 80px; /* Aparece al clickear */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-list a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    font-family: var(--font-body);
+    display: inline-block;
+}
+
+.nav-list a:hover {
+    color: #ffffff; /* Cambio a blanco en hover */
+    letter-spacing: 3px; /* Efecto sutil de expansión */
+    transform: scale(1.1);
+}
+
+section[id] {
+    scroll-margin-top: 80px; /* Evita que el header tape el inicio de la sección */
+}
+
+/* Efecto para que el scroll sea suave */
+html {
+    scroll-behavior: smooth;
 }

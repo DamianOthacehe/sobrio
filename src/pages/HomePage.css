@@ -1,13 +1,13 @@
 .hero-section {
     background-color: var(--color-secondary-black);
-    min-height: calc(100vh - 60px);
-    /* 100% de la altura de la vista menos la altura del header (aprox) */
+    /* min-height: calc(100vh - 60px); */ /* 100% de la altura de la vista menos la altura del header (aprox) */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem;
+    padding-top: 80px;
 }
 
 .hero-title {
@@ -53,17 +53,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
 }
 
 .card-ritual{
     z-index: 10;
-    background-color: var(--color-secondary-white);
+    background-color: var(--color-secondary-light);
 }
 
 .card-plans{
     z-index: 20;
     background-color: var(--color-secondary-white);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
 }
 
 .card-plans .subscriptions-header-block {
@@ -75,7 +75,8 @@
 
 .card-subscriptions {
     z-index: 30;
-    background-color: var(--color-accent); 
+    background-color: var(--color-accent);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
 }
 
 .card-subscriptions .registration-form-block {
