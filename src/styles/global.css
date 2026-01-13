@@ -30,8 +30,8 @@ dd {
     --color-secondary-white: #FFFFFF;
 
     /* Tipografía */
-    --font-body: 'Libre Caslon Display', Georgia, 'Times New Roman', serif;
-    --font-display: 'Kapakana','Garamond' sans-serif;
+    --font-body: 'Libre Caslon Display', serif;
+    --font-display: 'Kapakana', sans-serif;
 }
 
 html {
