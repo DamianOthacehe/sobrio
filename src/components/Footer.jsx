@@ -49,7 +49,7 @@ export default function Footer() {
                     </div>
 
                     <div className="footer-social-block">
-                        <p>contacto@sobrio.com <span className="icon-white">
+                        <p>sobriomdp@gmail.com <span className="icon-white">
                             <img src="https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/mail.png"
                                 alt="logo de mail" />
                         </span>

@@ -8,10 +8,10 @@ export default function SubscriptionForm() {
 
     const [loading, setLoading] = useState(false);
 
-    const SERVICE_ID = "service_43j9c3l"; 
-    const TEMPLATE_ADMIN_ID = "template_8q64lgk"; 
-    const TEMPLATE_WELCOME_ID = "template_h64879v";
-    const PUBLIC_KEY = "3-z-hKHBTSQIbfJVa";
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID; 
+    const TEMPLATE_ADMIN_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN; 
+    const TEMPLATE_WELCOME_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_WELCOME;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
