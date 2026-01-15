@@ -6,10 +6,21 @@ import MonthlySelections from '../components/MonthlySelections';
 import FAQSection from '../components/FAQSection';
 import RitualSection from '../components/RitualSection';
 import PlansSection from '../components/PlansSection';
+import { ASSETS } from '../constants/assets';
 
 export default function HomePage() {
     return (
         <main>
+
+            <title>Sobrio | Club de Vinos</title>
+            <meta name="description" content="Unite a Sobrio, el club de vinos que redefine el ritual de beber. Selecciones exclusivas y experiencias curadas." />
+            
+            {/* Estos son para cuando compartas el link por WhatsApp/Redes */}
+            <meta property="og:title" content="Sobrio | Club de Vinos" />
+            <meta property="og:description" content="Suscribite hoy y recibí las mejores etiquetas en tu casa." />
+            <meta property="og:image" content={ASSETS.BENEFITS_IMG} />
+            <meta property="og:url" content="https://sobrio.vercel.app" />
+
             <section id='hero' className='hero-section'>
                 <h1 className="hero-title title-display">SOBRIO</h1>
                 <p className="hero-subtitle text-focus-in">Club de Vinos</p>
