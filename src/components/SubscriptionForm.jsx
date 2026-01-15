@@ -8,19 +8,14 @@ export default function SubscriptionForm() {
 
     const [loading, setLoading] = useState(false);
 
-    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const TEMPLATE_ADMIN_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN;
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID; 
+    const TEMPLATE_ADMIN_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN; 
     const TEMPLATE_WELCOME_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_WELCOME;
     const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-
-        // --- DEBUGGING TEMPORAL ---
-        console.log("Intentando enviar...");
-        console.log("¿Existe API Key?", import.meta.env.VITE_FIREBASE_API_KEY ? "SÍ" : "NO");
-        console.log("ProjectId:", import.meta.env.VITE_FIREBASE_PROJECT_ID);
 
         const form = e.target;
         // Obtenemos los datos de los campos por su atributo 'name'
@@ -56,7 +51,7 @@ export default function SubscriptionForm() {
             // 4. ENVIAR LOS MAILS
             // Aviso a Sobrio
             await emailjs.send(SERVICE_ID, TEMPLATE_ADMIN_ID, templateParamsAdmin, PUBLIC_KEY);
-
+            
             // Bienvenida al Usuario
             await emailjs.send(SERVICE_ID, TEMPLATE_WELCOME_ID, templateParamsUser, PUBLIC_KEY);
 
@@ -64,10 +59,8 @@ export default function SubscriptionForm() {
             form.reset();
 
         } catch (error) {
-            console.error("ERROR REAL:", error); // Esto lo veremos en la consola
-            console.log("CODE:", error.code);
-            console.log("MESSAGE:", error.message);
-            alert("Error: " + error.message); // Alerta visual
+            console.error("Error:", error);
+            alert("Hubo un error al procesar tu solicitud. Por favor intenta nuevamente.");
         } finally {
             setLoading(false);
         }
