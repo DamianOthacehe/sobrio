@@ -17,6 +17,11 @@ export default function SubscriptionForm() {
         e.preventDefault();
         setLoading(true);
 
+        // --- DEBUGGING TEMPORAL ---
+        console.log("Intentando enviar...");
+        console.log("¿Existe API Key?", import.meta.env.VITE_FIREBASE_API_KEY ? "SÍ" : "NO");
+        console.log("ProjectId:", import.meta.env.VITE_FIREBASE_PROJECT_ID);
+
         const form = e.target;
         // Obtenemos los datos de los campos por su atributo 'name'
         const dbData = {
