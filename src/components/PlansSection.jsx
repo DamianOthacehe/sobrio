@@ -1,13 +1,12 @@
 import './SubscriptionsSection.css';
+import { ASSETS } from '../constants/assets';
 
 export default function PlansSection(){
-
-        const BACKGROUND_IMAGE_URL = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/banner-brindis.png';
 
     return(
         <section
                 className="subscriptions-header-block"
-                style={{ backgroundImage: `url('${BACKGROUND_IMAGE_URL}')` }} 
+                style={{ backgroundImage: `url('${ASSETS.BACKGROUND_IMG}')` }} 
             >
                 <h2 className="subscriptions-main-title title-display">Join the club</h2>
                 

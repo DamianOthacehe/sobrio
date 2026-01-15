@@ -1,9 +1,8 @@
 import ContactForm from './ContactForm';
 import './Footer.css';
+import { ASSETS } from '../constants/assets';
 
 export default function Footer() {
-    const LOGO_ICON = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/logo_blanco.png';
-    const ICON_WINE_WHITE = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/Copa%20blanca.png';
 
     return (
         <footer className="main-footer">
@@ -14,7 +13,7 @@ export default function Footer() {
                     <div className="footer-header-centered">
                         <h2 className="charlamos-title">
                             ¿Charlamos?
-                            <img src={ICON_WINE_WHITE} alt="copa" className="footer-title-icon" />
+                            <img src={ASSETS.ICON_CUP_WHITE} alt="copa" className="footer-title-icon" />
                         </h2>
                     </div>
 
@@ -35,7 +34,7 @@ export default function Footer() {
 
                 <div className="footer-info-grid">
                     <div className="footer-logo-block">
-                        <img src={LOGO_ICON} alt="Sobrio Isotipo" className="footer-isotipo-large" />
+                        <img src={ASSETS.LOGO_WHITE} alt="Sobrio Isotipo" className="footer-isotipo-large" />
                     </div>
 
                     <div className="footer-links-block">
@@ -50,18 +49,18 @@ export default function Footer() {
 
                     <div className="footer-social-block">
                         <p>sobriomdp@gmail.com <span className="icon-white">
-                            <img src="https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/mail.png"
+                            <img src={ASSETS.LOGO_MAIL}
                                 alt="logo de mail" />
                         </span>
                         </p>
                         <p>2235647826 <span className="icon-white">
-                            <img src="https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/wp.png"
+                            <img src={ASSETS.LOGO_WHATSAPP}
                                 alt="logo de whatsapp" />
                         </span>
                         </p>
                         <p>instagram.com/sobrio.ar
                             <span className="icon-white">
-                                <img src="https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/ig.png"
+                                <img src={ASSETS.LOGO_INSTAGRAM}
                                     alt="logo de instagram" />
                             </span>
                         </p>

@@ -1,8 +1,7 @@
 import './BenefitsSection.css';
+import { ASSETS } from '../constants/assets';
 
 export default function BenefitsSection() {
-    
-    const BOX_IMAGE_URL = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/caja%20sobrio.jpg'; 
 
     return (
         <section className="benefits-section">
@@ -42,7 +41,7 @@ export default function BenefitsSection() {
                 {/* 4.2. Bloque de Imagen (Caja de Vino) */}
                 <div className="benefits-image-block">
                     <img 
-                        src={BOX_IMAGE_URL} 
+                        src={ASSETS.BENEFITS_IMG} 
                         alt="Caja de vino" 
                         className="box-image"
                     />

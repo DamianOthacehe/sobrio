@@ -1,9 +1,8 @@
 import SubscriptionForm from './SubscriptionForm';
 import './SubscriptionsSection.css';
+import { ASSETS } from '../constants/assets';
 
 export default function SubscriptionsSection() {
-
-    const LARGE_CUP_ICON_URL = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/Copa%20blanca.png';
 
     return (
         <section id="subscriptions" className="subscriptions-section">
@@ -19,7 +18,7 @@ export default function SubscriptionsSection() {
                         </h2>
                         <div 
                             className="large-cup-icon"
-                            style={{ backgroundImage: `url('${LARGE_CUP_ICON_URL}')` }}
+                            style={{ backgroundImage: `url('${ASSETS.ICON_CUP_WHITE}')` }}
                         ></div> 
                     </div>
                     <SubscriptionForm/>

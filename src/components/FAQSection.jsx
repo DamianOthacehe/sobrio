@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './FAQSection.css';
 import CtaButton from './CTAButton';
+import { ASSETS } from '../constants/assets';
 
 export default function FAQSection() {
 
@@ -61,7 +62,7 @@ export default function FAQSection() {
                     {/* 5.3. Decoración: Copa Roja Inclinada */}
                     <div className="faq-decoration">
                         <img
-                            src="https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/Copa%20roja.png"
+                            src={ASSETS.ICON_CUP_RED}
                             alt="Decoración copa"
                             className="faq-glass-icon"
                         />

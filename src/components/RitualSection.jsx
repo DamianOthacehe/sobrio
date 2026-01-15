@@ -1,9 +1,8 @@
 import './AspirationalBlock.css';
 import CtaButton from './CTAButton';
+import { ASSETS } from '../constants/assets';
 
 export default function RitualSection(){
-
-        const IMG_4 = 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/kelsey-knight-udj2tD3WKsY-unsplash.jpg';
 
     return(
         <section className="join-ritual-block">
@@ -16,7 +15,7 @@ export default function RitualSection(){
                     <CtaButton text="Sumate al club" to="#subscriptions" />
                 </div>
                 <div className="ritual-image-content">
-                    <img src={IMG_4} alt="Gente brindando con copas de vino" className="ritual-image"/>
+                    <img src={ASSETS.ASPIRATIONAL_IMG_4} alt="Gente brindando con copas de vino" className="ritual-image"/>
                 </div>
         </section>
     )

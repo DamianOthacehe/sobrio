@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Header.css'
+import { ASSETS } from '../constants/assets';
 
 export default function Header() {
 
@@ -12,7 +13,7 @@ export default function Header() {
         <header className="main-header">
             {/* 1. Logo */}
             <a href="#hero" className="header-logo-link">
-                <img src="https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/logo_rojo.png"
+                <img src={ASSETS.LOGO_RED}
                     alt="Logo de sobrio"
                     className="header-logo" />
             </a>
