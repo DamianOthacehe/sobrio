@@ -12,10 +12,17 @@ export default function ContactForm() {
     const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault();        
+        const form = e.target;
+
+        const nameRegex = /^[a-zA-ZÀ-ÿ\s]{3,40}$/;
+        if (!nameRegex.test(form.name.value)) {
+            return toast.error("Por favor, ingresa un nombre válido.");
+        }
+
         setLoading(true);
 
-        const form = e.target;
+
         const dbData = {
             name: form.name.value,
             email: form.email.value,
@@ -46,10 +53,10 @@ export default function ContactForm() {
             form.reset();
 
         } catch (error) {
-            toast.error("Error:", error);
-            alert("Hubo un problema al enviar el mensaje", {
+            toast.error("Hubo un problema al enviar el mensaje", {
                 description: "Por favor intenta nuevamente"
             });
+            
         } finally {
             setLoading(false);
         }

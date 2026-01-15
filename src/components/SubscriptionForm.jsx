@@ -16,17 +16,28 @@ export default function SubscriptionForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const form = e.target;
+
+        const nameRegex = /^[a-zA-ZÀ-ÿ\s]{3,40}$/;
+        const phoneRegex = /^[0-9+ ]{8,20}$/;
+
+        if (!nameRegex.test(form.name.value)) {
+            return toast.error("El nombre debe tener al menos 3 letras y no contener números.");
+        }
+        if (!phoneRegex.test(form.phone.value)) {
+            return toast.error("Por favor, ingresa un teléfono válido (mínimo 8 dígitos).");
+        }
+
         setLoading(true);
 
-        const form = e.target;
-        // Obtenemos los datos de los campos por su atributo 'name'
+
         const dbData = {
             name: form.name.value,
             email: form.email.value,
             phone: form.phone.value,
             plan: form.plan.value,
             preferences: form.preferences.value,
-            date: serverTimestamp() // Guardamos la fecha
+            date: serverTimestamp()
         };
 
         try {
