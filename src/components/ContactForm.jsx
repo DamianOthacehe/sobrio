@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { db } from '../firebase/config';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
 
 export default function ContactForm() {
     const [loading, setLoading] = useState(false);
@@ -38,12 +39,17 @@ export default function ContactForm() {
             // 3. ENVIAR SOLO AL ADMIN
             await emailjs.send(SERVICE_ID, TEMPLATE_ADMIN_ID, templateParamsAdmin, PUBLIC_KEY);
 
-            alert("Gracias por su consulta. Le responderemos a la brevedad.");
+            toast.success("Gracias por su consulta", {
+                description: "Le responderemos a la brevedad."
+            });
+
             form.reset();
 
         } catch (error) {
-            console.error("Error:", error);
-            alert("Error al enviar el mensaje.");
+            toast.error("Error:", error);
+            alert("Hubo un problema al enviar el mensaje", {
+                description: "Por favor intenta nuevamente"
+            });
         } finally {
             setLoading(false);
         }

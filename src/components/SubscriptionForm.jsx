@@ -2,14 +2,15 @@ import { useState } from 'react';
 import { db } from '../firebase/config';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
 
 
 export default function SubscriptionForm() {
 
     const [loading, setLoading] = useState(false);
 
-    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID; 
-    const TEMPLATE_ADMIN_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN; 
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ADMIN_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN;
     const TEMPLATE_WELCOME_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_WELCOME;
     const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
@@ -51,16 +52,20 @@ export default function SubscriptionForm() {
             // 4. ENVIAR LOS MAILS
             // Aviso a Sobrio
             await emailjs.send(SERVICE_ID, TEMPLATE_ADMIN_ID, templateParamsAdmin, PUBLIC_KEY);
-            
+
             // Bienvenida al Usuario
             await emailjs.send(SERVICE_ID, TEMPLATE_WELCOME_ID, templateParamsUser, PUBLIC_KEY);
 
-            alert("¡Bienvenido a Sobrio! Te hemos enviado un correo de confirmación.");
+            toast.success("¡Bienvenido a Sobrio!", {
+                description: "Te hemos enviado un correo de confirmación."
+            });
+
             form.reset();
 
         } catch (error) {
-            console.error("Error:", error);
-            alert("Hubo un error al procesar tu solicitud. Por favor intenta nuevamente.");
+            toast.error('No se pudo procesar la suscripción', {
+                description: 'Por favor, intenta nuevamente más tarde.',
+            });
         } finally {
             setLoading(false);
         }
