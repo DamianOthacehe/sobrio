@@ -82,7 +82,7 @@ export default function ContactForm() {
             {/* Contenedor para alinear a la derecha */}
             <div className="footer-submit-container">
                 <button type="submit" className="footer-submit-btn" disabled={loading}>
-                    {loading ? '...' : 'Enviar'}
+                    {loading ? 'Enviando...' : 'Enviar'}
                 </button>
             </div>
         </form>

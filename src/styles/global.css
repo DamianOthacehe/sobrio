@@ -64,25 +64,31 @@ section[id] {
     scroll-margin-top: 0;
 }
 
-/* Estilo para el botón cuando está deshabilitado (loading) */
+/* Estilo base para el estado de carga */
 .form-cta-button:disabled,
 .footer-submit-btn:disabled {
-    background-color: #2a2a2a !important; 
-    color: #666 !important;
-    cursor: not-allowed; 
-    border-color: #444 !important;
-    opacity: 0.8;
-    transform: none !important; /* Quita efectos de escala si tenías */
+    cursor: not-allowed;
+    position: relative;
+    overflow: hidden; /* Para que la animación no se salga del botón */
+    color: #fff;
+    border-color: #444;
+    /* Creamos un degradado que moveremos con la animación */
+    background: linear-gradient(
+        90deg, 
+        #1a1a1a 0%, 
+        #4a0e0e 50%, 
+        #1a1a1a 100%
+    );
+    background-size: 200% 100%;
+    animation: loading-sweep 1.5s infinite linear;
 }
 
-/* Animación opcional de pulso para indicar que está trabajando */
-.form-cta-button:disabled::after {
-    content: "...";
-    animation: dots 1.5s infinite;
-}
-
-@keyframes dots {
-    0% { content: "."; }
-    33% { content: ".."; }
-    66% { content: "..."; }
+/* Animación que desplaza el fondo de izquierda a derecha */
+@keyframes loading-sweep {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }
