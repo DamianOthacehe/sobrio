@@ -35,14 +35,18 @@
     color: var(--color-secondary-white);
     text-decoration: none;
     padding: 1rem 2rem;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1.1rem;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .hero-cta-button:hover {
-    background-color: color-mix(in srgb, var(--color-accent) 70%, var(--color-secondary-black));
+    opacity: 1;
+    background-color: transparent;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
 }
 
 .sticky-card{

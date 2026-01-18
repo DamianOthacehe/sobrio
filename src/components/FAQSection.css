@@ -114,7 +114,6 @@
     margin-bottom: 2rem;
 }
 
-/* Reutilizamos el estilo del botón aspiracional */
 .faq-cta {
     display: inline-flex;
     align-items: center;
@@ -123,7 +122,7 @@
     
     background-color: transparent; 
     border: 2px solid var(--color-accent);
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
     
     color: var(--color-accent);

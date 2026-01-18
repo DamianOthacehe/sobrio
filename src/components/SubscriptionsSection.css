@@ -1,9 +1,3 @@
-
-/* Bloque de Títulos y Cards */
-/* .subscriptions-section {
-    Usamos el ID para el enlazado interno si fuera necesario 
-}*/
-
 .subscriptions-header-block {
     background-size: cover;
     background-position: center;
@@ -31,6 +25,9 @@
     margin-bottom: 3rem;
     position: relative;
     z-index: 2;
+    text-shadow: 
+        3px 4px 0px rgba(0,0,0,0.8), 
+        0px 10px 30px rgba(0,0,0,0.6);
 }
 
 /* Grilla de 3 planes */
@@ -47,18 +44,29 @@
 .plan-card {
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); 
     height: 100%;
     position: relative;
+    border: none;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                filter 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: scale(1.03); /* Crece sutilmente hacia el frente */
+    filter: brightness(1.1); /* Se ilumina levemente al activarse */
+    z-index: 10;
 }
 
 .plan-logo {
     font-family: var(--font-display); 
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
     text-align: left;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
+    font-style: italic;
 }
 
 .plan-title {
@@ -72,37 +80,52 @@
 .plan-description {
     font-family: var(--font-body);
     font-size: 1rem;
+    font-weight: 700;
     line-height: 1.5;
     margin-bottom: 2rem;
 }
 
 .plan-signature {
-    font-family: var(--font-display); 
-    font-size: 1.2rem;
-    margin-top: auto; 
+    font-family: var(--font-body); 
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: auto;
+    display: block;
+    font-style: italic;
+    letter-spacing: 2px;
 }
 
 /* Estilos Específicos de los Planes */
 .plan-noir {
     background-color: var(--color-accent);
-    color: var(--color-primary-dark);
-    border: 1px solid var(--color-primary-dark);
+    color: black;
+}
+
+.plan-noir .plan-logo, 
+.plan-noir .plan-signature {
+    color: black;
+    font-weight: 900;
 }
 
 .plan-blanc {
     background-color: var(--color-secondary-light);
     color: var(--color-primary-dark);
-    border: 1px solid var(--color-primary-dark);
+}
+
+.plan-blanc .plan-logo, 
+.plan-blanc .plan-signature {
+    color: var(--color-accent);
+    font-weight: 900;
 }
 
 .plan-equilibre {
     background-color: var(--color-primary-dark);
-    color: var(--color-secondary-white);
-    border: 1px solid var(--color-secondary-black);
+    color: var(--color-secondary-light);
 }
 
 .plan-equilibre .plan-logo, .plan-equilibre .plan-signature {
-    color: var(--color-accent);
+    color: var(--color-secondary-light);
+    font-weight: 900;
 }
 
 
@@ -197,4 +220,26 @@
     background-color: var(--color-accent); 
     color: var(--color-secondary-white); 
     border-color: var(--color-secondary-white);
+}
+
+.form-cta-button:disabled {
+    cursor: not-allowed;
+    position: relative;
+    overflow: hidden;
+    color: var(--color-secondary-white);
+    border-color: var(--color-accent);
+    
+    background: linear-gradient(
+        90deg, 
+        #e03d31 0%, 
+        #ff7b72 50%, 
+        #e03d31 100%
+    );
+    background-size: 200% 100%;
+    animation: loading-sweep-red 3s infinite linear;
+}
+
+@keyframes loading-sweep-red {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }

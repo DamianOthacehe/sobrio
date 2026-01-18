@@ -25,13 +25,15 @@
 }
 
 .footer-header p {
-    font-size: 1.1rem;
+    font-family: var(--font-display);
+    color: white;
+    font-size: 2rem;
     opacity: 0.8;
     letter-spacing: 1px;
 }
 
 .charlamos-title{
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: 3.5rem;
     font-weight: normal;
     display: flex;
@@ -125,7 +127,7 @@
     border: 1px solid white;
     color: white;
     padding: 0.4rem 2rem;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
     transition: all 0.3s ease; /* Transición suave */
@@ -134,6 +136,28 @@
 .footer-submit-btn:hover {
     background-color: white; /* El fondo se vuelve blanco */
     color: var(--color-primary-dark); /* El texto toma el color oscuro del footer */
+}
+
+.footer-submit-btn:disabled {
+    cursor: not-allowed;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    border-color: #333;
+    
+    background: linear-gradient(
+        90deg, 
+        #1A0A07 0%, 
+        #3d1c15 50%, 
+        #1A0A07 100%
+    );
+    background-size: 200% 100%;
+    animation: loading-sweep-dark 3s infinite linear;
+}
+
+@keyframes loading-sweep-dark {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 .footer-logo-links-block{

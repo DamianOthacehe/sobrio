@@ -31,7 +31,7 @@ export default function PlansSection(){
                     {/* Plan 3: Équilibre */}
                     <article className="plan-card plan-equilibre">
                         <div className="plan-logo">(S)</div>
-                        <h3 className="plan-title">Équilibre</h3>
+                        <h3 className="plan-title">Equilibre</h3>
                         <p className="plan-description">El punto justo entre ambos mundos. Una curaduría para quienes no temen disfrutar "sin reglas".</p>
                         <p className="plan-signature">SOBRIO</p>
                     </article>

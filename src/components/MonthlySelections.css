@@ -1,7 +1,15 @@
-/* --- Estilos Generales de la Sección --- */
+
+
 .monthly-selections-section {
-    /* Fondo Rojo (Requerido) */
     background-color: var(--color-accent); 
+    
+    background-image: 
+        linear-gradient(
+            rgba(224, 61, 49, 0.6), 
+            rgba(224, 61, 49, 0.6)
+        ), 
+        url('https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/Vinos.png');
+    background-blend-mode: soft-light; 
     padding: 6rem 2rem;
     color: var(--color-secondary-white);
 }
@@ -11,10 +19,12 @@
     color: var(--color-secondary-white); /* Título blanco sobre fondo rojo */
     font-size: 3rem;
     margin-bottom: 4rem;
-    /* Creamos un "halo" oscuro alrededor de las letras */
+    font-family: var(--font-display);
     text-shadow: 
-        0 0 20px rgba(0, 0, 0, 0.8),
-        0 0 40px rgba(0, 0, 0, 0.4);
+        1px 2px 4px rgba(0, 0, 0, 0.4),
+        0px 5px 15px rgba(0, 0, 0, 0.3);
+    /* position: relative;
+    z-index: 10; */
 }
 
 /* --- Grilla de Vinos --- */

@@ -14,7 +14,6 @@ export default function AspirationalSection() {
                     <img src={ASSETS.ASPIRATIONAL_IMG_1} alt="Mano sirviendo vino en copa" className="card-image"/>
                     <h3 className="card-title">Bienvenidos al club</h3>
                     <p className="card-text">Bienvenido a algo mas que un club de vinos. Estás adentro. Y eso ya es motivo para brindar.</p>
-                    <p className="signature-text">Sobrio</p>
                 </article>
                 
                 {/* Tarjeta 2 */}
@@ -29,7 +28,7 @@ export default function AspirationalSection() {
                     <img src={ASSETS.ASPIRATIONAL_IMG_3} alt="Mujer tomando vino al aire libre" className="card-image"/>
                     <h3 className="card-title">Selección mensual</h3>
                     <p className="card-text">Cada mes llega una nueva selección, curada con tiempo, historias y propósito.</p>
-                    <p className="card-text">Porque creemos en brindar distinto</p>
+                    <p className="card-text-signature">Porque creemos en brindar distinto</p>
                 </article>
                 
             </div>
