@@ -12,8 +12,7 @@
 
 .faq-main-title {
     text-align: center;
-    font-family: var(--font-body);
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 4rem;
 }
 
@@ -27,8 +26,13 @@
 
 /* Estilos del Acordeón */
 .faq-item {
-    border-bottom: 2px solid var(--color-accent); /* Línea roja de la imagen */
+    border-bottom:  1px solid rgba(0, 0, 0, 0.1); /* Línea roja de la imagen */
     margin-bottom: 1rem;
+    transition: all 0.4s ease;
+}
+
+.faq-item.active {
+    border-bottom-color: var(--color-accent); /* Resalta solo la activa */
 }
 
 .faq-question {
@@ -38,6 +42,7 @@
     border: none;
     font-family: var(--font-body);
     font-size: 1.4rem;
+    font-weight: 500;
     padding: 1rem 0;
     cursor: pointer;
     color: var(--color-primary-dark);
@@ -48,15 +53,22 @@
     color: var(--color-accent);
 }
 
+.faq-item.active .faq-question {
+    color: var(--color-accent);
+}
+
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.3s ease;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease-out;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px; /* Suficiente para el texto */
-    padding-bottom: 1.5rem;
+    grid-template-rows: 1fr;
+}
+
+.faq-answer-content {
+    overflow: hidden;
 }
 
 .faq-answer p {
@@ -73,10 +85,17 @@
 }
 
 .faq-glass-icon {
-    width: 250px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
-    transform: rotate(15deg); /* Inclinada hacia la derecha */
-    opacity: 0.9;
+    transform: rotate(1deg);
+    filter: drop-shadow(10px 20px 30px rgba(0,0,0,0.05));
+    animation: float-cup 6s ease-in-out infinite; /* Animación de flotación */
+}
+
+@keyframes float-cup {
+    0%, 100% { transform: rotate(1deg) translateY(0); }
+    50% { transform: rotate(5deg) translateY(-20px); }
 }
 
 /* Footer de la sección */

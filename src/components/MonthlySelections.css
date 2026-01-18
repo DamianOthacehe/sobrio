@@ -11,6 +11,10 @@
     color: var(--color-secondary-white); /* Título blanco sobre fondo rojo */
     font-size: 3rem;
     margin-bottom: 4rem;
+    /* Creamos un "halo" oscuro alrededor de las letras */
+    text-shadow: 
+        0 0 20px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(0, 0, 0, 0.4);
 }
 
 /* --- Grilla de Vinos --- */

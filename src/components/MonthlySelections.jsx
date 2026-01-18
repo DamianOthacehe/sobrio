@@ -1,5 +1,6 @@
 import WineCard from "./WineCard";
 import './MonthlySelections.css';
+import { ASSETS } from "../constants/assets";
 
 export default function MonthlySelections() {
 
@@ -86,7 +87,10 @@ export default function MonthlySelections() {
 
 
     return (
-        <section className="monthly-selections-section">
+        <section
+            className="monthly-selections-section"
+            style={{ backgroundImage: `url('${ASSETS.BACKGROUND_SEL}')` }}
+        >
             <h2 className="section-title title-display selection-title">
                 Nuestras selecciones anteriores
             </h2>

@@ -16,8 +16,9 @@ export const ASSETS = {
     ASPIRATIONAL_IMG_3: 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/photo-1525576064846-083dce8b33ba.jpg',
     ASPIRATIONAL_IMG_4: 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/kelsey-knight-udj2tD3WKsY-unsplash.jpg',
 
-    // PLANES
-    BACKGROUND_IMG: 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/banner-brindis.png',
+    // BACKGROUND
+    BACKGROUND_PLANS: 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/banner-brindis.png',
+    BACKGROUND_SEL: 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/Vinos.png',
 
     //BENEFITS
     BENEFITS_IMG: 'https://pub-3ce380b6ddaf41119e39fdb9078e3aef.r2.dev/caja%20sobrio.jpg'

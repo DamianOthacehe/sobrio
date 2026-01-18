@@ -7,8 +7,6 @@ export default function SubscriptionsSection() {
     return (
         <section id="subscriptions" className="subscriptions-section">
             
-            
-            
             {/* Bloque de Registro (Formulario) */}
             <div className="registration-form-block">
                 <div className="registration-content">

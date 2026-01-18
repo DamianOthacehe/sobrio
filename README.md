@@ -48,3 +48,6 @@ VITE_FIREBASE_PROJECT_ID=tu_proyecto_id
 VITE_EMAILJS_SERVICE_ID=tu_service_id
 VITE_EMAILJS_TEMPLATE_ADMIN=tu_template_id
 VITE_EMAILJS_PUBLIC_KEY=tu_public_key
+
+4. **Inicia el servidor de desarrollo:**
+npm run dev

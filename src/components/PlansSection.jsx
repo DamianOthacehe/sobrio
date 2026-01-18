@@ -6,7 +6,7 @@ export default function PlansSection(){
     return(
         <section
                 className="subscriptions-header-block"
-                style={{ backgroundImage: `url('${ASSETS.BACKGROUND_IMG}')` }} 
+                style={{ backgroundImage: `url('${ASSETS.BACKGROUND_PLANS}')` }} 
             >
                 <h2 className="subscriptions-main-title title-display">Join the club</h2>
                 

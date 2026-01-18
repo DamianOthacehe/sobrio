@@ -42,7 +42,7 @@ export default function FAQSection() {
     return (
         <section className="faq-section">
             <div className='faq-wrapper'>
-                <h2 className="faq-main-title">Preguntas frecuentes</h2>
+                <h2 className="faq-main-title title-display">Preguntas frecuentes</h2>
 
                 <div className="faq-container">
                     {/* 5.2. Lista de Preguntas (Acordeón) */}
@@ -53,7 +53,9 @@ export default function FAQSection() {
                                     {faq.question}
                                 </button>
                                 <div className="faq-answer">
-                                    <p>{faq.answer}</p>
+                                    <div className="faq-answer-content">
+                                        <p>{faq.answer}</p>
+                                    </div>
                                 </div>
                             </div>
                         ))}
