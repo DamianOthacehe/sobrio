@@ -21,7 +21,10 @@ export default function Header() {
             <button className="header-menu-icon" onClick={toggleMenu}>
                 {isOpen ? '✕' : '☰'}
             </button>
-
+            <div
+                className={`menu-overlay ${isOpen ? 'active' : ''}`}
+                onClick={toggleMenu}
+            />
             {/* Menú de Navegación */}
             <nav className={`header-nav ${isOpen ? 'nav-open' : ''}`}>
                 <ul className="nav-list">

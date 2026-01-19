@@ -22,31 +22,68 @@
     border: none;
     background-color: transparent;
     color: var(--color-accent);
-    font-size: 2rem;
+    font-size: 2.2rem;
     cursor: pointer;
-    z-index: 1100;
+    z-index: 1200;
     transition: transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
 }
 
 .header-menu-icon:active {
     transform: scale(0.9);
 }
 
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* Oscurece sutilmente el resto de la web */
+    backdrop-filter: blur(2px); /* Un desenfoque extra para el fondo */
+    z-index: 1000; /* Por debajo del menú (1100) pero por encima de todo lo demás */
+    
+    /* Animación de entrada/salida */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 .header-nav {
     position: absolute;
-    top: -500px; /* Empieza arriba oculto */
-    right: 0;
-    width: 250px;
-    background-color: var(--color-secondary-black);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: -1; /* Pasa por debajo del logo/botón */
-    padding: 2rem 0;
-    border-bottom-left-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    top: 100%; 
+    right: 1.5rem; 
+    width: 280px;
+    background-color: rgba(26, 10, 7, 0.98); 
+    
+    transform-origin: top right;
+    transform: scaleY(0); /* Empieza totalmente contraído */
+    opacity: 0;
+    visibility: hidden;
+    
+    transition: 
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.3s ease;
+    
+    z-index: 1100;
+    padding: 3rem 0;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(224, 61, 49, 0.2);
 }
 
 .header-nav.nav-open {
-    top: 80px; /* Aparece al clickear */
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
 }
 
 .nav-list {
@@ -57,22 +94,40 @@
     gap: 1.5rem;
 }
 
+.nav-list li a {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+.header-nav.nav-open .nav-list li a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delays progresivos: Cada link espera un poco más que el anterior */
+.header-nav.nav-open .nav-list li:nth-child(1) a { transition-delay: 0.2s; }
+.header-nav.nav-open .nav-list li:nth-child(2) a { transition-delay: 0.3s; }
+.header-nav.nav-open .nav-list li:nth-child(3) a { transition-delay: 0.4s; }
+.header-nav.nav-open .nav-list li:nth-child(4) a { transition-delay: 0.5s; }
+.header-nav.nav-open .nav-list li:nth-child(5) a { transition-delay: 0.6s; }
+.header-nav.nav-open .nav-list li:nth-child(6) a { transition-delay: 0.7s; }
+
 .nav-list a {
-    color: var(--color-accent);
+    color: var(--color-secondary-white);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.3s;
+    letter-spacing: 3px;
     font-family: var(--font-body);
-    display: inline-block;
 }
 
-.nav-list a:hover {
-    color: #ffffff; /* Cambio a blanco en hover */
-    letter-spacing: 3px; /* Efecto sutil de expansión */
-    transform: scale(1.1);
+.header-nav.nav-open .nav-list li a:hover {
+    color: var(--color-accent);
+    transform: scale(1.1) translateY(0); /* Incluimos el Y(0) para mantener la posición */
+    letter-spacing: 5px;
 }
 
 section[id] {
