@@ -243,3 +243,81 @@
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
+
+/* MEDIA QUERIES */
+
+/* --- TABLET Y MOBILE (Hasta 768px) --- */
+@media (max-width: 768px) {
+    /* 1. Títulos Principales */
+    .subscriptions-main-title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .registration-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    /* 2. El Carrusel de Planes */
+    .plans-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1.5rem;
+        padding: 1rem 1.5rem 3rem;
+        margin: 0 -1.5rem;
+        scrollbar-width: none;
+    }
+
+    .plans-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .plan-card {
+        min-width: 85%;
+        scroll-snap-align: center;
+        height: auto;
+        padding: 3rem 2rem 2rem;
+    }
+
+    /* 3. Bloque de Formulario (Stack Vertical) */
+    .registration-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0;
+    }
+
+    .registration-info {
+        min-height: auto;
+        text-align: center;
+    }
+
+    .large-cup-icon {
+        width: 150px;
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin: 1rem auto 0;
+        display: block;
+    }
+
+    .registration-form-block {
+        padding: 4rem 1.5rem;
+    }
+}
+
+/* --- MINI MOBILE (Hasta 480px) --- */
+@media (max-width: 480px) {
+    .subscriptions-main-title {
+        font-size: 2.5rem;
+    }
+
+    .plan-card {
+        min-width: 90%;
+    }
+
+    .plan-title {
+        font-size: 2rem;
+    }
+}

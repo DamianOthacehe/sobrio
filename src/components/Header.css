@@ -41,10 +41,10 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4); /* Oscurece sutilmente el resto de la web */
-    backdrop-filter: blur(2px); /* Un desenfoque extra para el fondo */
-    z-index: 1000; /* Por debajo del menú (1100) pero por encima de todo lo demás */
-    
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 1000;
+
     /* Animación de entrada/salida */
     opacity: 0;
     visibility: hidden;
@@ -58,24 +58,24 @@
 
 .header-nav {
     position: absolute;
-    top: 100%; 
-    right: 1.5rem; 
+    top: 100%;
+    right: 1.5rem;
     width: 280px;
-    background-color: rgba(26, 10, 7, 0.98); 
-    
+    background-color: rgba(26, 10, 7, 0.98);
+
     transform-origin: top right;
-    transform: scaleY(0); /* Empieza totalmente contraído */
+    transform: scaleY(0);
     opacity: 0;
     visibility: hidden;
-    
-    transition: 
+
+    transition:
         transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
         opacity 0.3s ease;
-    
+
     z-index: 1100;
     padding: 3rem 0;
     border-radius: 12px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(224, 61, 49, 0.2);
 }
@@ -107,12 +107,29 @@
 }
 
 /* Delays progresivos: Cada link espera un poco más que el anterior */
-.header-nav.nav-open .nav-list li:nth-child(1) a { transition-delay: 0.2s; }
-.header-nav.nav-open .nav-list li:nth-child(2) a { transition-delay: 0.3s; }
-.header-nav.nav-open .nav-list li:nth-child(3) a { transition-delay: 0.4s; }
-.header-nav.nav-open .nav-list li:nth-child(4) a { transition-delay: 0.5s; }
-.header-nav.nav-open .nav-list li:nth-child(5) a { transition-delay: 0.6s; }
-.header-nav.nav-open .nav-list li:nth-child(6) a { transition-delay: 0.7s; }
+.header-nav.nav-open .nav-list li:nth-child(1) a {
+    transition-delay: 0.2s;
+}
+
+.header-nav.nav-open .nav-list li:nth-child(2) a {
+    transition-delay: 0.3s;
+}
+
+.header-nav.nav-open .nav-list li:nth-child(3) a {
+    transition-delay: 0.4s;
+}
+
+.header-nav.nav-open .nav-list li:nth-child(4) a {
+    transition-delay: 0.5s;
+}
+
+.header-nav.nav-open .nav-list li:nth-child(5) a {
+    transition-delay: 0.6s;
+}
+
+.header-nav.nav-open .nav-list li:nth-child(6) a {
+    transition-delay: 0.7s;
+}
 
 .nav-list a {
     color: var(--color-secondary-white);
@@ -126,15 +143,74 @@
 
 .header-nav.nav-open .nav-list li a:hover {
     color: var(--color-accent);
-    transform: scale(1.1) translateY(0); /* Incluimos el Y(0) para mantener la posición */
+    transform: scale(1.1) translateY(0);
     letter-spacing: 5px;
 }
 
 section[id] {
-    scroll-margin-top: 80px; /* Evita que el header tape el inicio de la sección */
+    scroll-margin-top: 80px;
 }
 
 /* Efecto para que el scroll sea suave */
 html {
     scroll-behavior: smooth;
+}
+
+/* MEDIA QUERIES */
+
+/* --- TABLET (Hasta 768px) --- */
+@media (max-width: 768px) {
+    .main-header {
+        height: 70px; 
+        padding: 0 15px;
+    }
+
+    section[id] {
+        scroll-margin-top: 70px;
+    }
+
+    .header-nav {
+        right: 1rem; 
+        width: 260px;
+        padding: 2.5rem 0;
+    }
+}
+
+/* --- MOBILE (Hasta 480px) --- */
+@media (max-width: 480px) {
+    .main-header {
+        height: 60px;
+    }
+
+    section[id] {
+        scroll-margin-top: 60px;
+    }
+
+    .header-logo {
+        width: 2.5rem;
+    }
+
+    .header-nav {
+        position: fixed; 
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        
+        border-radius: 0;
+        border-left: none;
+        border-bottom: 1px solid rgba(224, 61, 49, 0.2);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-list {
+        gap: 2rem;
+    }
+
+    .nav-list a {
+        font-size: 1.2rem; 
+    }
 }

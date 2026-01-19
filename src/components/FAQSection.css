@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-.faq-wrapper{
+.faq-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -18,21 +18,21 @@
 
 .faq-container {
     display: grid;
-    grid-template-columns: 1.5fr 1fr; /* Espacio para preguntas y la copa */
+    grid-template-columns: 1.5fr 1fr; /* Lado a lado en Desktop */
     gap: 2rem;
     align-items: start;
-    position: relative;
+    position: relative; /* Necesario para que la copa se ubique detrás en móvil */
 }
 
-/* Estilos del Acordeón */
+/* --- Acordeón --- */
 .faq-item {
-    border-bottom:  1px solid rgba(0, 0, 0, 0.1); /* Línea roja de la imagen */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
     transition: all 0.4s ease;
 }
 
 .faq-item.active {
-    border-bottom-color: var(--color-accent); /* Resalta solo la activa */
+    border-bottom-color: var(--color-accent);
 }
 
 .faq-question {
@@ -77,7 +77,7 @@
     color: rgba(26, 10, 7, 0.8);
 }
 
-/* Decoración de la Copa */
+/* --- Decoración de la Copa --- */
 .faq-decoration {
     display: flex;
     justify-content: center;
@@ -86,19 +86,19 @@
 
 .faq-glass-icon {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     height: auto;
-    transform: rotate(1deg);
+    transform: rotate(25deg);
     filter: drop-shadow(10px 20px 30px rgba(0,0,0,0.05));
-    animation: float-cup 6s ease-in-out infinite; /* Animación de flotación */
+    animation: float-cup 6s ease-in-out infinite;
 }
 
 @keyframes float-cup {
-    0%, 100% { transform: rotate(1deg) translateY(0); }
-    50% { transform: rotate(5deg) translateY(-20px); }
+    0%, 100% { transform: rotate(25deg) translateY(0); }
+    50% { transform: rotate(30deg) translateY(-20px); }
 }
 
-/* Footer de la sección */
+/* --- Footer de la sección --- */
 .faq-footer {
     text-align: center;
     margin-top: 5rem;
@@ -119,28 +119,14 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
-    
     background-color: transparent; 
     border: 2px solid var(--color-accent);
     border-radius: 8px;
     text-decoration: none;
-    
     color: var(--color-accent);
     font-weight: bold;
     font-family: var(--font-body);
     transition: background-color 0.3s, color 0.3s;
-    position: relative;
-}
-
-.faq-cta-margin {
-    margin-top: 2rem;
-}
-
-.faq-glass-icon {
-    width: 300px; /* Un poco más grande para que se luzca como en la imagen */
-    height: auto;
-    transform: rotate(25deg); /* Inclinación pronunciada */
-    opacity: 1;
 }
 
 .faq-cta:hover {
@@ -148,15 +134,30 @@
     color: var(--color-secondary-white);
 }
 
+/* --- RESPONSIVE: Aquí es donde la copa pasa detrás --- */
 
-
-/* Responsive */
 @media (max-width: 768px) {
     .faq-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una sola columna para las preguntas */
     }
+
     .faq-decoration {
-        order: -1; /* Copa arriba en móvil o podrías ocultarla */
-        margin-bottom: 2rem;
+        position: absolute; /* Sale del flujo y se pone detrás */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0; /* Por detrás de las preguntas */
+        opacity: 0.15; /* Transparencia para que no moleste al leer */
+        pointer-events: none; /* Los clicks pasan de largo */
+        width: 100%;
+    }
+
+    .faq-item {
+        position: relative;
+        z-index: 1; /* Asegura que el acordeón esté por encima de la copa */
+    }
+    
+    .faq-glass-icon {
+        max-width: 250px; /* Un poco más chica para que no desborde */
     }
 }

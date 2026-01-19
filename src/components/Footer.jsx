@@ -12,10 +12,10 @@ export default function Footer() {
                 <section id='contact'>
                     <div className="footer-header">
                         <h2 className="charlamos-title">
-                            Club de vinos
+                            Club de Brindis
                             <img src={ASSETS.ICON_CUP_WHITE} alt="copa" className="footer-title-icon" />
                         </h2>
-                        <p>Queremos acompañarte en cada brindis</p>
+                        <p>Queremos acompañarte en cada momento</p>
                     </div>
                     <div className='footer-content'>
                         <div className="footer-contact-section">

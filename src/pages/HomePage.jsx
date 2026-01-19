@@ -12,7 +12,7 @@ export default function HomePage() {
     return (
         <main>
 
-            <title>Sobrio | Club de Vinos</title>
+            <title>Sobrio | Club de Brindis</title>
             <meta name="description" content="Unite a Sobrio, el club de vinos que redefine el ritual de beber. Selecciones exclusivas y experiencias curadas." />
             
             {/* Estos son para cuando compartas el link por WhatsApp/Redes */}
@@ -23,7 +23,7 @@ export default function HomePage() {
 
             <section id='hero' className='hero-section'>
                 <h1 className="hero-title title-display">SOBRIO</h1>
-                <p className="hero-subtitle text-focus-in">Club de Vinos</p>
+                <p className="hero-subtitle text-focus-in">Club de Brindis</p>
                 <a href='#selections' className="hero-cta-button">
                     Descubrí la selección de este mes
                 </a>
