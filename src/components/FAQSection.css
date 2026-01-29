@@ -136,28 +136,28 @@
 
 /* --- RESPONSIVE: Aquí es donde la copa pasa detrás --- */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .faq-container {
-        grid-template-columns: 1fr; /* Una sola columna para las preguntas */
+        grid-template-columns: 1fr;
     }
 
     .faq-decoration {
-        position: absolute; /* Sale del flujo y se pone detrás */
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 0; /* Por detrás de las preguntas */
-        opacity: 0.15; /* Transparencia para que no moleste al leer */
-        pointer-events: none; /* Los clicks pasan de largo */
+        z-index: 0;
+        opacity: 0.15;
+        pointer-events: none;
         width: 100%;
     }
 
     .faq-item {
         position: relative;
-        z-index: 1; /* Asegura que el acordeón esté por encima de la copa */
+        z-index: 1;
     }
     
     .faq-glass-icon {
-        max-width: 250px; /* Un poco más chica para que no desborde */
+        max-width: 250px;
     }
-}
+} */

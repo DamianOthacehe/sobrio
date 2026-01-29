@@ -96,9 +96,8 @@
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .benefits-content-wrapper {
-        /* Pasa a una columna, poniendo la imagen debajo del texto */
         grid-template-columns: 1fr;
     }
-}
+} */

@@ -64,31 +64,327 @@ section[id] {
     scroll-margin-top: 0;
 }
 
-/* Estilo base para el estado de carga
-.form-cta-button:disabled,
-.footer-submit-btn:disabled {
-    cursor: not-allowed;
-    position: relative;
-    overflow: hidden; /* Para que la animación no se salga del botón */
-    /* color: #fff;
-    border-color: #444; */
-    /* Creamos un degradado que moveremos con la animación */
-    /* background: linear-gradient(
-        90deg, 
-        #1a1a1a 0%, 
-        #4a0e0e 50%, 
-        #1a1a1a 100%
-    );
-    background-size: 200% 100%;
-    animation: loading-sweep 1.5s infinite linear;
-} */
 
-/* Animación que desplaza el fondo de izquierda a derecha */
-/* @keyframes loading-sweep {
-    0% {
-        background-position: 200% 0;
+
+
+
+/* --- TABLET (Landscape) --- */
+@media (max-width: 1023px) {
+    /* HomePage */
+    .hero-title {
+        font-size: 7rem; /* Reducción inicial */
     }
-    100% {
-        background-position: -200% 0;
+    .hero-subtitle {
+        font-size: 3rem;
+        margin-bottom: 5rem;
     }
-} */
+
+    /* Subscriptions */
+    .plans-grid {
+        gap: 1rem; /* Ajuste de espaciado */
+    }
+    .plan-card {
+        padding: 1.5rem;
+    }
+
+    /* Benefits */
+    .benefits-content-wrapper {
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    /* Monthly Selections */
+    .wines-grid {
+        /* Mantenemos grilla pero ajustamos gaps */
+        gap: 2rem;
+    }
+}
+
+/* --- TABLET (Portrait) --- */
+@media (max-width: 900px) {
+    /* HomePage */
+    .hero-title {
+        font-size: 6rem;
+    }
+
+    /* Aspirational */
+    .aspirational-grid {
+        grid-template-columns: repeat(2, 1fr); /* De 3 pasa a 2 columnas */
+    }
+
+    /* Subscriptions */
+    .subscriptions-main-title {
+        font-size: 4rem;
+    }
+    .registration-content {
+        gap: 3rem;
+    }
+    
+    /* FAQ */
+    .faq-container {
+        gap: 1.5rem;
+    }
+}
+
+/* --- TABLET STANDARD / MOBILE LANDSCAPE --- */
+@media (max-width: 768px) {
+    /* Header (Lógica Maui: Logo se ajusta, nav cambia) */
+    .main-header {
+        height: 70px;
+        padding: 0 15px;
+    }
+    .header-logo {
+        width: 2.5rem;
+    }
+    section[id] {
+        scroll-margin-top: 70px;
+    }
+    
+    /* Nav Lateral (Estilo Maui Overlay) */
+    .header-nav {
+        right: 0;
+        top: 70px;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: rgba(26, 10, 7, 0.98);
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav-list {
+        gap: 2rem;
+    }
+    .nav-list a {
+        font-size: 1.5rem; /* Más grande para dedo */
+    }
+
+    /* HomePage */
+    .hero-title {
+        font-size: 5rem;
+    }
+    .hero-subtitle {
+        font-size: 2.5rem;
+    }
+
+    /* Aspirational (Pasamos a columna) */
+    .join-ritual-block {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+    .ritual-image-content {
+        order: -1; /* Imagen arriba */
+    }
+    .join-club-cta {
+        width: 100%; /* Botón ancho completo */
+        justify-content: center;
+    }
+
+    /* Subscriptions */
+    .plans-grid {
+        /* Estilo Carousel Horizontal (Scroll) */
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 2rem;
+    }
+    .plan-card {
+        min-width: 280px; /* Ancho fijo Maui style */
+        scroll-snap-align: center;
+    }
+    
+    /* Registration Form */
+    .registration-content {
+        grid-template-columns: 1fr; /* Columna única */
+    }
+    .large-cup-icon {
+        position: relative;
+        width: 150px;
+        bottom: auto;
+        right: auto;
+        margin: 2rem auto;
+        display: block;
+    }
+
+    /* Benefits */
+    .benefits-content-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .benefits-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar items */
+    }
+    .benefit-item {
+        justify-content: center;
+        text-align: left;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* FAQ */
+    .faq-container {
+        grid-template-columns: 1fr;
+    }
+    .faq-decoration {
+        position: absolute;
+        opacity: 0.1;
+        z-index: 0;
+        top: 20%;
+    }
+}
+
+/* --- INTERMEDIATE (Maui 675px Breakpoint) --- */
+@media (max-width: 675px) {
+    /* HomePage */
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    /* Aspirational */
+    .aspirational-grid {
+        grid-template-columns: 1fr; /* Todo a 1 columna */
+        gap: 3rem;
+    }
+    .card-image {
+        height: 300px; /* Ajuste altura imagen */
+    }
+
+    /* Monthly Selections */
+    .selection-title {
+        font-size: 2.5rem;
+    }
+    .wines-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 sola columna de vinos */
+        padding: 0 2rem;
+    }
+    .wine-card {
+        width: 100%;
+        max-width: 400px; /* Limitamos ancho máximo */
+        margin: 0 auto;
+    }
+}
+
+/* --- LARGE MOBILE (Maui 576px Breakpoint) --- */
+@media (max-width: 576px) {
+    /* Header */
+    .main-header {
+        height: 60px;
+    }
+    section[id] {
+        scroll-margin-top: 60px;
+    }
+    .header-nav {
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+
+    /* HomePage */
+    .hero-section {
+        padding-top: 60px;
+    }
+    .hero-title {
+        font-size: 3.5rem;
+        line-height: 1.1;
+    }
+    .hero-subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Form Inputs (Lógica Maui: Anchos controlados) */
+    .form-input, .form-textarea, .form-cta-button {
+        width: 100%; /* Asegura ancho completo en móvil */
+        font-size: 1rem;
+    }
+    
+    /* Subscriptions */
+    .subscriptions-main-title {
+        font-size: 2.8rem;
+    }
+    .plan-card {
+        min-width: 85vw; /* Casi todo el ancho de pantalla */
+    }
+
+    /* Benefits */
+    .benefits-title {
+        font-size: 2.2rem;
+    }
+    .benefit-item {
+        font-size: 1rem;
+    }
+    .benefits-cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* FAQ */
+    .faq-main-title {
+        font-size: 2.5rem;
+    }
+    .faq-question {
+        font-size: 1.2rem;
+    }
+}
+
+/* --- MEDIUM MOBILE (Maui 425px Breakpoint) --- */
+@media (max-width: 425px) {
+    /* General Typography Reduction */
+    h1, .hero-title, .ritual-title, .subscriptions-main-title {
+        font-size: 2.5rem !important; /* Forzamos tamaño manejable */
+    }
+    h2, .section-title {
+        font-size: 1.8rem;
+    }
+    p, .card-text, .ritual-paragraph {
+        font-size: 0.9rem;
+    }
+
+    /* Aspirational */
+    .aspirational-section, .join-ritual-block {
+        padding: 3rem 1rem;
+    }
+    .card-image, .ritual-image {
+        height: 250px; /* Imágenes más chicas */
+    }
+
+    /* Monthly Selections */
+    .wine-card {
+        min-height: auto; /* Quitamos altura forzada */
+    }
+    .wine-image-container {
+        height: 200px;
+    }
+}
+
+/* --- SMALL MOBILE (Maui 320px Breakpoint) --- */
+@media (max-width: 320px) {
+    /* Header */
+    .header-logo {
+        width: 2rem;
+    }
+    .header-menu-icon {
+        font-size: 1.8rem;
+    }
+
+    /* HomePage */
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    .hero-cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Subscriptions Form */
+    .form-input {
+        height: 35px; /* Altura Maui style */
+    }
+    
+    /* Footer & Legal */
+    .copyright p {
+        font-size: 0.7rem;
+    }
+}
