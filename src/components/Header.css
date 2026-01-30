@@ -159,7 +159,7 @@ html {
 /* MEDIA QUERIES */
 
 /* --- TABLET (Hasta 768px) --- */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .main-header {
         height: 70px; 
         padding: 0 15px;
@@ -174,10 +174,10 @@ html {
         width: 260px;
         padding: 2.5rem 0;
     }
-} */
+}
 
 /* --- MOBILE (Hasta 480px) --- */
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
     .main-header {
         height: 60px;
     }
@@ -213,4 +213,4 @@ html {
     .nav-list a {
         font-size: 1.2rem; 
     }
-} */
+}

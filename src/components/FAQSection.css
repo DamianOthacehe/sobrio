@@ -136,7 +136,7 @@
 
 /* --- RESPONSIVE: Aquí es donde la copa pasa detrás --- */
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .faq-container {
         grid-template-columns: 1fr;
     }
@@ -160,4 +160,4 @@
     .faq-glass-icon {
         max-width: 250px;
     }
-} */
+}

@@ -139,9 +139,9 @@
     }
 }
 
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
     .sticky-card {
-        position: relative; Desactivamos sticky en móvil para evitar bugs de scroll
+        position: relative; /* Desactivamos sticky en móvil para evitar bugs de scroll */
         min-height: auto;
         padding: 4rem 1.5rem;
     }
@@ -149,4 +149,4 @@
     .hero-section {
         min-height: 80vh;
     }
-} */
+}
