@@ -1,7 +1,6 @@
 /* --- Bloque Aspiracional Superior (3 Columnas) --- */
 .aspirational-section {
     padding: 6rem 2rem 0;
-    /* padding-top: 6rem; */
     max-width: 1200px;
     margin: 0 auto;
     background-color: var(--color-secondary-light);
@@ -9,7 +8,7 @@
 
 .aspirational-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin-bottom: 6rem;
 }
@@ -27,8 +26,9 @@
 
 .card-image {
     width: 100%;
-    height: 380px; /* Altura fija para uniformidad */
+    height: 380px;
     object-fit: cover; 
+    object-position: 50% 15%;
     margin-bottom: 1.8rem;
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -51,7 +51,7 @@
 }
 
 .card-text-signature {
-    font-family: var(--font-display); /* Tu fuente cursiva/display */
+    font-family: var(--font-display);
     font-size: 1.6rem;
     color: var(--color-accent);
     margin-top: 1rem;
@@ -67,8 +67,7 @@
     grid-template-columns: 1fr 1.2fr; 
     gap: 6rem;
     align-items: center;
-    padding: 0 2rem 6rem;
-    /* padding-bottom: 6rem; */
+    padding: 2rem 2rem 4rem;
     max-width: 1200px;
     margin: 0 auto;
     background-color: var(--color-secondary-light);
@@ -146,79 +145,63 @@
     vertical-align: middle; 
 }
 
+
+
 /* MEDIA QUERIES */
 
-/* --- TABLET (Hasta 1024px) --- */
-@media (max-width: 1024px) {
-    .join-ritual-block {
-        gap: 3rem;
-        grid-template-columns: 1fr 1fr;
-    }
 
-    .ritual-title {
-        font-size: 3rem;
+@media (max-width: 1023px) {
+    .aspirational-section { padding: 4rem 1.5rem 0; }
+    .aspirational-grid { gap: 1.5rem; } 
+    .card-title { font-size: 1.4rem; }
+}
+
+@media (max-width: 900px) {
+    .card-image { height: 300px; } 
+    .join-ritual-block { gap: 2.5rem; }
+    .ritual-title { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .card-text { font-size: 0.9rem; }
+    .card-text-signature { font-size: 1.3rem; }
+    
+    .join-ritual-block {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-/* --- MOBILE (Hasta 768px) --- */
-@media (max-width: 768px) {
-    .aspirational-section {
-        padding: 4rem 1.5rem 0;
-    }
-
+@media (max-width: 675px) {
     .aspirational-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
         margin-bottom: 4rem;
-        gap: 2.5rem;
     }
 
     .card-image {
-        height: 300px;
+        height: 350px;
+        object-position: 50% 35%;
     }
 
-    /* Stack vertical para el bloque Ritual */
     .join-ritual-block {
-        grid-template-columns: 1fr; 
-        gap: 4rem;
-        padding: 0 1.5rem 4rem;
+        grid-template-columns: 1fr;
+        gap: 3rem;
         text-align: center;
     }
 
     .ritual-image-content {
-        order: -1; 
+        order: -1; /* Imagen arriba del texto */
     }
 
-    .ritual-title {
-        font-size: 2.5rem;
-    }
-
-    .ritual-image-content::after {
-        top: 10px;
-        left: 10px;
-        right: -10px;
-        bottom: -10px;
-    }
-
-    .ritual-image {
-        height: 320px;
-    }
-
-    .join-club-cta {
-        width: 100%;
-        justify-content: center;
-    }
+    .ritual-image { height: 320px; }
 }
 
-/* --- MINI MOBILE (Hasta 480px) --- */
-@media (max-width: 480px) {
-    .ritual-title {
-        font-size: 2.2rem;
-    }
+/* Ajustes finales para pantallas muy pequeñas */
+@media (max-width: 425px) {
+    .ritual-title { font-size: 2.1rem; }
+    .card-image { height: 280px; }
+}
 
-    .card-title {
-        font-size: 1.4rem;
-    }
-
-    .card-text-signature {
-        font-size: 1.3rem;
-    }
+@media (max-width: 320px) {
+    .aspirational-section { padding: 3rem 1rem 0; }
 }

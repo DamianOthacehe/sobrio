@@ -15,7 +15,6 @@ export default function HomePage() {
             <title>Sobrio | Club de Brindis</title>
             <meta name="description" content="Unite a Sobrio, el club de vinos que redefine el ritual de beber. Selecciones exclusivas y experiencias curadas." />
             
-            {/* Estos son para cuando compartas el link por WhatsApp/Redes */}
             <meta property="og:title" content="Sobrio | Club de Vinos" />
             <meta property="og:description" content="Suscribite hoy y recibí las mejores etiquetas en tu casa." />
             <meta property="og:image" content={ASSETS.BENEFITS_IMG} />
@@ -30,6 +29,7 @@ export default function HomePage() {
             </section>
 
             <AspirationalSection/>
+            <div className="stacking-cards">
             <section className="sticky-card card-ritual">
                 <RitualSection/>
             </section>
@@ -43,6 +43,7 @@ export default function HomePage() {
             <section className="sticky-card card-subscriptions">
                 <SubscriptionsSection/>
             </section>
+            </div>
             <div className="normal-scroll-content">
                 <div id='benefits' className="anchor"></div>
                 <BenefitsSection/>

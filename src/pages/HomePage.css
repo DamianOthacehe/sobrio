@@ -1,13 +1,18 @@
 .hero-section {
     background-color: var(--color-secondary-black);
-    /* min-height: calc(100vh - 60px); */ /* 100% de la altura de la vista menos la altura del header (aprox) */
     min-height: 100vh;
+    padding-top: var(--header-height, 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 5rem 2rem 0;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem; 
+
+    width: 100%;
+    position: relative;
 }
 
 .hero-title {
@@ -50,11 +55,15 @@
     color: var(--color-accent);
 }
 
+.stacking-cards {
+    position: relative;
+}
+
 .sticky-card{
     position: sticky;
-    top: 0;
+    top: var(--header-height);
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - var(--header-height));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,11 +151,17 @@
 @media (max-width: 900px) {
     .sticky-card {
         position: relative; /* Desactivamos sticky en móvil para evitar bugs de scroll */
+        top: 0;
         min-height: auto;
-        padding: 4rem 1.5rem;
     }
-    
+}
+
+@media (max-width: 480px) {
     .hero-section {
-        min-height: 80vh;
+        padding-top: 60px; 
+    }
+
+    .sticky-card {
+        top: 0;
     }
 }

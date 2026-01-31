@@ -88,14 +88,13 @@
     width: 100%;
     max-width: 300px;
     height: auto;
-    transform: rotate(25deg);
     filter: drop-shadow(10px 20px 30px rgba(0,0,0,0.05));
     animation: float-cup 6s ease-in-out infinite;
 }
 
 @keyframes float-cup {
-    0%, 100% { transform: rotate(25deg) translateY(0); }
-    50% { transform: rotate(30deg) translateY(-20px); }
+    0%, 100% { transform: rotate(5deg) translateY(0); }
+    50% { transform: rotate(10deg) translateY(-20px); }
 }
 
 /* --- Footer de la sección --- */

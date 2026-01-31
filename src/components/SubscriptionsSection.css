@@ -246,10 +246,18 @@
 
 /* MEDIA QUERIES */
 
+@media (max-width: 1023px){
+    .large-cup-icon {
+    width: 220px;
+    bottom: -55px;
+    right: -20px;
+}
+}
+
 /* --- TABLET Y MOBILE (Hasta 768px) --- */
 @media (max-width: 768px) {
     .subscriptions-main-title {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-bottom: 2rem;
     }
 
@@ -288,12 +296,17 @@
     }
 
     .registration-info {
+        width: 80%;
+        margin: 0 auto;
         min-height: auto;
         text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .large-cup-icon {
-        width: 150px;
+        width: 120px;
         position: relative;
         bottom: 0;
         right: 0;
@@ -309,7 +322,7 @@
 /* --- MINI MOBILE (Hasta 480px) --- */
 @media (max-width: 480px) {
     .subscriptions-main-title {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     .plan-card {
