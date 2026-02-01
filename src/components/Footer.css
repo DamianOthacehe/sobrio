@@ -333,8 +333,8 @@
             "form form"
             "logo social";
         
-        gap: 3rem 1rem;
-        padding: 2rem 1rem;
+        gap: 3rem 0;
+        padding: 0;
     }
 
     /* --- HEADER Y FORM (Ocupan todo el ancho) --- */

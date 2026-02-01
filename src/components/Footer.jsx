@@ -71,7 +71,7 @@ export default function Footer() {
                 </section>
 
                 <div className="footer-bottom">
-                    <p>© 2026 SOBRIO - Todos los derechos reservados |
+                    <p>© 2026 SOBRIO - Todos los derechos reservados<br />
                         Diseñado por <a href="https://www.linkedin.com/in/damian-otha/" target="_blank" rel="noreferrer">Damian Othacehe</a></p>
                 </div>
             </div>
