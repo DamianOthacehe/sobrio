@@ -53,11 +53,12 @@
 
 .card-text-signature {
     font-family: var(--font-display);
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     color: var(--color-accent);
     margin-top: 1rem;
     font-style: italic;
     font-weight: 600;
+    text-align: end;
 }
 
 
@@ -165,8 +166,8 @@
 }
 
 @media (max-width: 768px) {
-    .card-text { font-size: 0.9rem; }
-    .card-text-signature { font-size: 1.3rem; }
+    .card-text { font-size: 1.1rem; }
+    .card-text-signature { font-size: 1.5rem; }
     
     .join-ritual-block {
         grid-template-columns: 1fr 1fr;

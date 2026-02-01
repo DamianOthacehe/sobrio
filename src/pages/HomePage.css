@@ -85,7 +85,7 @@
 }
 
 .card-plans .subscriptions-header-block {
-    min-height: 100vh; /* Forzamos a que el componente interno llene la carta */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,14 +140,6 @@
         opacity: 1;
     }
 }
-
-/* @media (max-width: 900px) {
-    .sticky-card {
-        position: relative; Desactivamos sticky en móvil para evitar bugs de scroll 
-        top: 0;
-        min-height: auto;
-    }
-} */
 
 @media (max-width: 480px) {
     .hero-section {

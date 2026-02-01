@@ -1,6 +1,6 @@
 .faq-section {
     background-color: var(--color-secondary-light);
-    padding: 6rem 2rem;
+    padding: 6rem;
     width: 100%;
 }
 
@@ -18,7 +18,7 @@
 
 .faq-container {
     display: grid;
-    grid-template-columns: 1.5fr 1fr; /* Lado a lado en Desktop */
+    grid-template-columns: 1.5fr 1fr; 
     gap: 2rem;
     align-items: start;
     position: relative; /* Necesario para que la copa se ubique detrás en móvil */
