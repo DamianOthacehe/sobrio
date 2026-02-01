@@ -1,3 +1,22 @@
+/* --- CONFIGURACIÓN BASE (DESKTOP) --- */
+
+/* Asignamos nombres a las áreas para moverlas fácil */
+.footer-header {
+    grid-area: header;
+}
+
+.footer-contact-section {
+    grid-area: form;
+}
+
+.footer-logo-links-block {
+    grid-area: logo;
+}
+
+.footer-social-block {
+    grid-area: social;
+}
+
 .main-footer {
     background-color: var(--color-primary-dark);
     color: white;
@@ -15,13 +34,28 @@
     flex-direction: column;
 }
 
+.footer-content {
+    padding: 2rem 4rem;
+    width: 100%;
+    display: grid;
+    /* Dibujo Desktop: Header arriba solo, abajo 3 columnas */
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    grid-template-areas:
+        "header header header"
+        "form logo social";
+    align-items: start;
+    gap: 4rem;
+}
+
+
 .footer-header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* Centrado en desktop */
     gap: 0.5rem;
-    color: white;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+    /* Reduje el margen de 5rem porque ahora el gap de la grilla ayuda */
 }
 
 .footer-header p {
@@ -32,7 +66,7 @@
     letter-spacing: 1px;
 }
 
-.charlamos-title{
+.charlamos-title {
     font-family: var(--font-body);
     font-size: 3.5rem;
     font-weight: normal;
@@ -42,20 +76,9 @@
     margin: 0;
 }
 
-
-
 .footer-title-icon {
-    width: 30px;
+    width: 45px;
     height: auto;
-}
-
-.footer-content{
-    padding: 2rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1.5fr;
-    align-items: flex-start;
-    gap: 4rem;
 }
 
 /* 3. Bloque de contacto centrado */
@@ -102,7 +125,7 @@
 .footer-framed-input {
     background: transparent;
     border: 1px solid white;
-    border-top: none; 
+    border-top: none;
     color: white;
     padding: 8px 12px;
     width: 100%;
@@ -111,7 +134,8 @@
 }
 
 .footer-textarea {
-    min-height: 40px; /* Ajusta la altura del campo mensaje */
+    min-height: 40px;
+    /* Ajusta la altura del campo mensaje */
     resize: none;
 }
 
@@ -119,7 +143,8 @@
 .footer-submit-container {
     width: 100%;
     display: flex;
-    justify-content: flex-end; /* Alinea botón a la derecha */
+    justify-content: flex-end;
+    /* Alinea botón a la derecha */
 }
 
 .footer-submit-btn {
@@ -130,12 +155,15 @@
     border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    transition: all 0.3s ease; /* Transición suave */
+    transition: all 0.3s ease;
+    /* Transición suave */
 }
 
 .footer-submit-btn:hover {
-    background-color: white; /* El fondo se vuelve blanco */
-    color: var(--color-primary-dark); /* El texto toma el color oscuro del footer */
+    background-color: white;
+    /* El fondo se vuelve blanco */
+    color: var(--color-primary-dark);
+    /* El texto toma el color oscuro del footer */
 }
 
 .footer-submit-btn:disabled {
@@ -144,23 +172,26 @@
     overflow: hidden;
     color: #fff;
     border-color: #333;
-    
-    background: linear-gradient(
-        90deg, 
-        #1A0A07 0%, 
-        #3d1c15 50%, 
-        #1A0A07 100%
-    );
+
+    background: linear-gradient(90deg,
+            #1A0A07 0%,
+            #3d1c15 50%,
+            #1A0A07 100%);
     background-size: 200% 100%;
     animation: loading-sweep-dark 3s infinite linear;
 }
 
 @keyframes loading-sweep-dark {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
-.footer-logo-links-block{
+.footer-logo-links-block {
     display: flex;
     align-items: center;
 }
@@ -177,13 +208,13 @@
 }
 
 /* 6. Enlaces */
-.footer-links ul{
+.footer-links ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-links li a{
+.footer-links li a {
     color: white;
     text-decoration: none;
     line-height: 2.5;
@@ -192,6 +223,7 @@
 
 .footer-social-block {
     text-align: right;
+    padding-right: 2rem;
 }
 
 .footer-social-block p {
@@ -200,10 +232,11 @@
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
+    font-size: 1.1rem;
 }
 
-.icon-white img{
-    width: 2rem;
+.icon-white img {
+    width: 2.5rem;
 }
 
 .footer-bottom {
@@ -215,8 +248,102 @@
     opacity: 0.7;
 }
 
-.footer-bottom a{
+.footer-bottom a {
     text-decoration: none;
     color: white;
 }
 
+
+
+/* --- MEDIA QUERIES --- */
+
+/* BREAKPOINT 1: TABLET / LAPTOP PEQUEÑA (Max 1023px) */
+@media (max-width: 1023px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header form"
+            "logo social";
+        gap: 4rem 2rem;
+        padding: 1rem;
+    }
+
+    /* Ajuste visual: Alineamos el header a la izquierda o derecha para balancear con el form */
+    .footer-header {
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        margin-bottom: 0;
+        height: 100%;
+    }
+
+    .footer-contact-section {
+        align-items: flex-end;
+    }
+
+    .footer-logo-links-block {
+        justify-self: start;
+    }
+
+    .footer-social-block {
+        justify-self: end;
+    }
+}
+
+/* BREAKPOINT 2: MOBILE GRANDE (Max 675px)*/
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header header"
+            "form form"
+            "logo social";
+        gap: 3rem;
+    }
+
+    .footer-header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-contact-section {
+        padding: 0 3rem;
+        align-items: center;
+    }
+
+    .footer-cta-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .footer-framed-input {
+        max-width: 100%;
+    }
+
+    .footer-isotipo-large {
+        width: 90px;
+    }
+
+    .footer-social-block p {
+        gap: 5px;
+    }
+
+    .icon-white img {
+        width: 2.2rem;
+    }
+}
+
+/* BREAKPOINT 3: MOBILE PEQUEÑO (Max 425px) */
+@media (max-width: 425px) {
+    .footer-content {
+        gap: 2rem;
+    }
+
+    .footer-social-block p {
+        flex-direction: column-reverse;
+        /* Icono arriba, texto abajo */
+        align-items: flex-end;
+        text-align: right;
+        margin-bottom: 1rem;
+    }
+}

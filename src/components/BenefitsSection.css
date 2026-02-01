@@ -100,4 +100,13 @@
     .benefits-content-wrapper {
         grid-template-columns: 1fr;
     }
+
+    .benefits-cta-button{
+        display: flex;
+        justify-self: center;
+    }
+
+    .benefits-image-block{
+        display: none;
+    }
 }

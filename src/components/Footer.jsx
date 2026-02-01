@@ -8,16 +8,18 @@ export default function Footer() {
         <footer className="main-footer">
             <div className="footer-wrapper">
 
-                {/* 1. Título con mayor margen inferior */}
+                {/* 1. Título */}
                 <section id='contact'>
-                    <div className="footer-header">
-                        <h2 className="charlamos-title">
-                            Club de Brindis
-                            <img src={ASSETS.ICON_CUP_WHITE} alt="copa" className="footer-title-icon" />
-                        </h2>
-                        <p>Queremos acompañarte en cada momento</p>
-                    </div>
                     <div className='footer-content'>
+                        <div className="footer-header">
+                            <h2 className="charlamos-title">
+                                Club de Brindis
+                                <img src={ASSETS.ICON_CUP_WHITE} alt="copa" className="footer-title-icon" />
+                            </h2>
+                            <p>Queremos acompañarte en cada momento</p>
+                        </div>
+
+                        {/* 2. Contacto */}
                         <div className="footer-contact-section">
                             <div className="footer-cta-text">
                                 <p className="highlight-text">Escribinos tu consulta y te <br /> respondemos en menos de 24 hs</p>
@@ -28,8 +30,7 @@ export default function Footer() {
                         </div>
 
 
-                        {/* 2. Título Club de brindis */}
-
+                        {/* 3. Logo y links */}
                         <div className="footer-logo-links-block">
                             <div className="footer-logo">
                                 <img src={ASSETS.LOGO_WHITE} alt="Sobrio Isotipo" className="footer-isotipo-large" />
@@ -45,6 +46,8 @@ export default function Footer() {
                                 </ul>
                             </div>
                         </div>
+
+                        {/* 4. Redes Sociales */}
                         <div className="footer-social-block">
                             <p>sobriomdp@gmail.com <span className="icon-white">
                                 <img src={ASSETS.LOGO_MAIL}

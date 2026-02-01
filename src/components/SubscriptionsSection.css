@@ -248,7 +248,7 @@
 
 @media (max-width: 1023px){
     .large-cup-icon {
-    width: 220px;
+    width: 180px;
     bottom: -55px;
     right: -20px;
 }
@@ -306,7 +306,7 @@
     }
 
     .large-cup-icon {
-        width: 120px;
+        width: 100px;
         position: relative;
         bottom: 0;
         right: 0;
