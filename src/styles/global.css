@@ -40,7 +40,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; 
+    overflow-x: clip; 
     scroll-behavior: smooth;
     /* 1. Fondo de la página: Cream claro */
     background-color: var(--color-secondary-light);

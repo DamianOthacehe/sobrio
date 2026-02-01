@@ -58,7 +58,7 @@
 .footer-header p {
     font-family: var(--font-display);
     color: white;
-    font-size: 2rem;
+    font-size: 2.1rem;
     opacity: 0.8;
     letter-spacing: 1px;
 }
@@ -115,7 +115,7 @@
 
 .footer-label {
     min-width: 70px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     text-align: right;
 }
 
@@ -193,7 +193,7 @@
 }
 
 .links-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: normal;
     margin-bottom: 1rem;
 }
@@ -209,7 +209,7 @@
     color: white;
     text-decoration: none;
     line-height: 2.5;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .footer-social-block {
@@ -223,7 +223,7 @@
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .icon-white img {
@@ -235,7 +235,7 @@
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 1rem;
     opacity: 0.7;
 }
 

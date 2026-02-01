@@ -35,6 +35,7 @@ export default function SubscriptionForm() {
             name: form.name.value,
             email: form.email.value,
             phone: form.phone.value,
+            address: form.address.value,
             plan: form.plan.value,
             preferences: form.preferences.value,
             date: serverTimestamp()
@@ -50,6 +51,7 @@ export default function SubscriptionForm() {
                 name: form.name.value,
                 email: form.email.value,
                 phone: form.phone.value,
+                address: form.address.value,
                 message_body: `Plan elegido: ${form.plan.value}\nPreferencias: ${form.preferences.value}`
             };
 
@@ -94,6 +96,10 @@ export default function SubscriptionForm() {
             />
             <input
                 type="tel" name='phone' placeholder="Tu telefono"
+                className="form-input" required
+            />
+            <input
+                type="text" name='address' placeholder="Tu dirección"
                 className="form-input" required
             />
 
