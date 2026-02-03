@@ -193,7 +193,7 @@
     }
 
     .ritual-image-content {
-        order: -1; /* Imagen arriba del texto */
+        order: -1;
     }
 
     .ritual-image { height: 320px; }

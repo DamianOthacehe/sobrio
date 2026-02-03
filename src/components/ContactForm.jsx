@@ -36,11 +36,11 @@ export default function ContactForm() {
 
             // 2. PREPARAR DATOS PARA EL MAIL AL ADMIN (Reutilizando Template Universal)
             const templateParamsAdmin = {
-                subject_title: "NUEVA CONSULTA DE CONTACTO", // Título diferente
+                subject_title: "NUEVA CONSULTA DE CONTACTO",
                 name: form.name.value,
                 email: form.email.value,
-                phone: "No especificado", // El form de contacto no tiene tel
-                message_body: `Mensaje: ${form.message.value}` // El cuerpo es el mensaje
+                phone: "No especificado",
+                message_body: `Mensaje: ${form.message.value}`
             };
 
             // 3. ENVIAR SOLO AL ADMIN
@@ -79,7 +79,6 @@ export default function ContactForm() {
                 <textarea name="message" className="footer-framed-input footer-textarea"
                     required />
             </div>
-            {/* Contenedor para alinear a la derecha */}
             <div className="footer-submit-container">
                 <button type="submit" className="footer-submit-btn" disabled={loading}>
                     {loading ? 'Enviando...' : 'Enviar'}

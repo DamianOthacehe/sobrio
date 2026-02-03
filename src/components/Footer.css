@@ -1,6 +1,3 @@
-/* --- CONFIGURACIÓN BASE (DESKTOP) --- */
-
-/* Asignamos nombres a las áreas para moverlas fácil */
 .footer-header {
     grid-area: header;
 }
@@ -396,8 +393,6 @@
         justify-content: flex-end;
         align-items: center;
         margin-bottom: 1rem;
-        
-        /*Si el email es muy largo, permite que baje de línea */
         word-break: break-word; 
         max-width: 100%;
     }

@@ -6,7 +6,8 @@ export default function WineCard({ wine }) {
 
             <div className="card-front">
                 <div className="wine-image-container">
-                    <img src={wine.image} alt={wine.name} className="wine-image" />
+                    <img src={wine.image} alt={wine.name} className="wine-image" width="300" 
+                        height="900" />
                     <span className="wine-month-badge">{wine.month}</span>
                 </div>
                 <div className="wine-info">
